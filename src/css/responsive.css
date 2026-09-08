@@ -226,3 +226,79 @@
         height: 650px;
     }
 }
+html,
+body {
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 148px;
+    }
+
+    .gepatit-comp-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 70px;
+    }
+
+    .gepatit-comp-grid article {
+        padding: 20px;
+    }
+
+    .gepatit-therapy-card {
+        width: calc(100% - 120px);
+        margin: -70px auto 0;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .gepatit-therapy-grid article {
+        padding: 16px;
+    }
+
+    .gepatit-left {
+        left: 40px;
+        top: 230px;
+    }
+
+    .gepatit-right {
+        right: 40px;
+        top: 375px;
+    }
+
+    #appoint > * {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 390px) {
+    .banner {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navtop li:nth-child(2) {
+        padding-right: 1rem;
+        position: relative;
+        color: transparent;
+        width: 2em;
+    }
+}
+
+@media (max-width: 767px) {
+    h2.heading {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

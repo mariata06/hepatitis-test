@@ -36,6 +36,7 @@
     border-radius: 6px;
     font-weight: 700;
     padding: 0 20px;
+    display: inline-block;
 }
 
 .btn {
@@ -84,6 +85,13 @@
     }
 }
 
+@media (max-width: 1170px) {
+    .learn-more {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
 @media (max-width: 767px) {
     .banner .learn-more {
         position: relative;
@@ -105,5 +113,11 @@
         margin: 0;
         width: 100%;
         font-size: x-large;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner p, .mncntnt p {
+        font-size: 22px;
     }
 }

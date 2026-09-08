@@ -29,6 +29,23 @@
     color: indigo;
 }
 
+.maincontent .heading2 {
+    border-bottom: 4px solid #f0f8ff;
+    padding: 0;
+    color: #016a77;
+    font-weight: 500;
+    font-size: 33px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.maincontent p {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1.42857143;
+    hyphens: auto;
+}
+
 .gepatit-deck {
     width: min(100%, 1280px);
     margin: 0 auto;
@@ -311,7 +328,7 @@
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -43px;
+    bottom: -48px;
     width: 18px;
     height: 18px;
     border-radius: 50%;

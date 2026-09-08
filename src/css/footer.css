@@ -107,7 +107,7 @@
 }
 
 #navlaw > * {
-    padding: .75rem 15px;
+    /* padding: .75rem 15px; */
 }
 
 #navlaw > * > * > a,
@@ -148,12 +148,12 @@
 /* Юридическая информация */
 .container > .row {
     position: relative;
-    background: #fafafa;
+    /* background: #fafafa; */
     padding: 40px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 0;
-    margin: 60px 0 0;
+    /* margin: 60px 0 0; */
 }
 
 .col-md-3,
@@ -389,6 +389,11 @@
     }
 }
 
+.col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+}
+
 #priv {
     height: 1px;
     opacity: 0;
@@ -446,7 +451,7 @@
 
 #appoint #privp {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .iti--allow-dropdown .iti__flag-container, .iti--show-selected-dial-code .iti__flag-container {
@@ -504,5 +509,76 @@
 @media (min-width:768px) {
     #mapdiv::after {
         padding: 0 50% 0 5% !important;
+    }
+}
+
+/* Иконки в блоке "Наши контакты" */
+#navtalk > ul > li[data-href="#addr"] > ul > li > a::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: -3px;
+
+    background-color: #fff;
+
+    -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><path d='M60.5-.12c-24.778 0-44.865 20.087-44.865 44.865 0 41.91 44.865 75.405 44.865 75.405s44.865-33.494 44.865-75.405c0-24.78-20.083-44.866-44.86-44.865zm0 64.688c-10.947 0-19.822-8.875-19.822-19.823S49.553 24.922 60.5 24.922s19.824 8.875 19.824 19.823S71.45 64.568 60.5 64.568z' /></svg>") center / contain no-repeat;
+
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><path d='M60.5-.12c-24.778 0-44.865 20.087-44.865 44.865 0 41.91 44.865 75.405 44.865 75.405s44.865-33.494 44.865-75.405c0-24.78-20.083-44.866-44.86-44.865zm0 64.688c-10.947 0-19.822-8.875-19.822-19.823S49.553 24.922 60.5 24.922s19.824 8.875 19.824 19.823S71.45 64.568 60.5 64.568z' /></svg>") center / contain no-repeat;
+}
+
+/* Часы работы */
+#navtalk > ul > li[data-href="#clock"] > span::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: -3px;
+
+    background-color: #fff;
+
+    -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 0C114.609 0 0 114.625 0 256s114.609 256 256 256c141.375 0 256-114.625 256-256S397.375 0 256 0zm0 96c17.672 0 32 14.313 32 32v96h96c17.688 0 32 14.313 32 32 0 17.688-14.312 32-32 32H256c-17.672 0-32-14.312-32-32V128c0-17.687 14.328-32 32-32z'/></svg>") center / contain no-repeat;
+
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 0C114.609 0 0 114.625 0 256s114.609 256 256 256c141.375 0 256-114.625 256-256S397.375 0 256 0zm0 96c17.672 0 32 14.313 32 32v96h96c17.688 0 32 14.313 32 32 0 17.688-14.312 32-32 32H256c-17.672 0-32-14.312-32-32V128c0-17.687 14.328-32 32-32z'/></svg>") center / contain no-repeat;
+}
+
+/* Телефон */
+#navtalk > ul > li[data-href^="tel:"] > a::before {
+    content: "☎";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Email */
+#navtalk > ul > li[data-href^="mailto:"] > a::before {
+    content: "✉";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* ВКонтакте */
+#navtalk > ul > li[data-href^="https://vk.com"] > a::before {
+    content: "VK";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+/* Окно обратной связи */
+#navtalk > ul > li[data-href="hotline.html#mailto"] > a::before {
+    content: "✉";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .adgovdesc {
+        font-size: 2em;
     }
 }
