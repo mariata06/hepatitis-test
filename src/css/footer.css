@@ -1,0 +1,508 @@
+.footer_element_01 {
+    background: #00a7bc;
+    border-top: 3px solid #00a7bc;
+    color: #fff;
+    padding-top: 2rem;
+}
+
+.footer_element_01 .container {
+    padding: 0;
+}
+
+.foot {
+    float: left;
+    line-height: 1.25rem;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.foot ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.foot > ul {
+    margin: 0 0 2.5rem;
+    font-size: initial;
+}
+
+.foot > * > li {
+    margin: 0 0 1.25rem;
+}
+
+.foot > * > li:first-child {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.foot a {
+    color: #ff8f39;
+    text-decoration: none;
+}
+
+.foot a:not(:focus):not(:hover) {
+    color: inherit;
+}
+
+#navqual img {
+    width: 18em;
+}
+
+@media (min-width: 576px) {
+    .foot {
+        width: 22.2222%;
+    }
+
+    #navqual {
+        width: 33.3333%;
+    }
+
+    .foot ~ .foot {
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .foot {
+        font-size: .85rem;
+    }
+
+    .foot > * > li {
+        margin: 0 0 .875rem;
+    }
+
+    .foot > ul {
+        margin: 0 0 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .foot {
+        font-size: .95rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .foot:nth-of-type(n+3) {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        padding-top: 1.5rem;
+    }
+
+    .foot:nth-of-type(2n+3) {
+        clear: left;
+    }
+}
+
+@media (max-width: 359px) {
+    .foot {
+        font-size: .875rem;
+    }
+}
+
+.navlaw_element_01 {
+    background: #016a77;
+    color: #fff;
+    padding: 20px;
+}
+
+#navlaw > * {
+    padding: .75rem 15px;
+}
+
+#navlaw > * > * > a,
+#navlaw > * > * > span {
+    display: inline-block;
+    padding: .25em 0;
+}
+
+#navlaw > * > * > a {
+    color: #ff8f39;
+    text-decoration: none;
+}
+
+#navlaw > * > * > a:not(:focus):not(:hover) {
+    color: inherit;
+}
+
+#navlaw > * > :first-child {
+    width: 15em;
+}
+
+#navlaw > * > :nth-child(2) {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    #navlaw > * > * {
+        float: left;
+    }
+
+    #navlaw > * > :nth-child(2) {
+        border: 0;
+    }
+}
+
+/* юридическая информация */
+/* Юридическая информация */
+.container > .row {
+    position: relative;
+    background: #fafafa;
+    padding: 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 0;
+    margin: 60px 0 0;
+}
+
+.col-md-3,
+.col-md-4,
+.col-md-5 {
+    padding: 0 15px;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .col-md-3,
+    .col-md-4,
+    .col-md-5 {
+        float: left;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.3333%;
+    }
+
+    .col-md-5 {
+        width: 41.6667%;
+    }
+}
+
+.col-md-4 {
+    text-align: center;
+}
+
+.container > .row > .col-md-4 {
+    text-align: center;
+}
+
+.col-md-3.hidden-xs {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+}
+
+.col-md-3.hidden-xs {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+#mapdiv {
+    font-family: inherit;
+    height: 420px;
+}
+
+@media (min-width: 768px) {
+    #mapdiv {
+        height: 650px;
+    }
+}
+
+#mapdiv {
+    font-family: inherit;
+    height: 420px;
+}
+
+@media (min-width: 768px) {
+    #mapdiv {
+        height: 650px;
+    }
+}
+
+#appointgo {
+    display: block;
+    width: 100%;
+}
+
+#appoint img {
+    color: #12a48b;
+    height: 2em;
+    object-fit: contain;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 1.25em;
+    width: 2em;
+}
+
+@media (min-width: 768px) {
+    #appoint img {
+        height: 1.5em;
+        top: 1.25em;
+        width: 1.5rem;
+    }
+}
+
+#appointgo {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+    #appointgo {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #appointgo {
+        margin: auto;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #appoint h2 {
+        font-size: 1.5rem;
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
+    }
+}
+
+#appoint .form-control {
+    background: transparent;
+    border: 1px solid #c7c7c7;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    box-shadow: none;
+    color: inherit;
+    display: block;
+    font: inherit;
+    height: 3rem;
+    padding: .5rem 1rem .5rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #appoint .form-control {
+        height: 2.5rem;
+    }
+}
+
+#appoint .form-group label {
+    color: #016a77;
+    font-size: .95rem;
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    #appoint .form-group label {
+        color: #016a77;
+    }
+}
+
+#appoint .form-group {
+    padding-top: 1rem;
+    position: relative;
+}
+
+@media (max-width: 575px) {
+    #appoint [data-name="go"] {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (min-width: 768px) {
+    #appoint > :first-child::before,
+    #appoint > :first-child::after {
+        border-bottom: 20px solid #d7d7d7;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1px;
+    }
+
+    #appoint > :first-child::before {
+        border-left: 10px solid transparent;
+        left: -10px;
+    }
+
+    #appoint > :first-child::after {
+        border-right: 10px solid transparent;
+        right: -10px;
+    }
+}
+
+#appoint > * {
+    background: #fdf5f6;
+    padding: 1px 15px;
+}
+
+@media (min-width: 576px) {
+    #appoint > * {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #appoint > * {
+        background: #fff;
+        border-top: 1px solid #d7d7d7;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+        margin-top: -20px;
+        padding: 0 2.5rem 1.5rem;
+        position: absolute;
+        right: 2.5rem;
+        width: 360px;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    #appoint > * {
+        width: 32rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #appoint > * {
+        left: 50%;
+        right: auto;
+    }
+}
+
+#priv {
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#appoint #priv + * {
+    display: block;
+    font-weight: inherit;
+    padding-left: 1.4rem;
+    position: static;
+    text-transform: none;
+}
+
+@media (max-width: 767px) {
+    #appoint #priv + * {
+        font-size: inherit;
+        line-height: 1.3333rem;
+    }
+
+    #appointgo {
+        width: 90%;
+        margin-left: 20px;
+        font-size: x-large;
+    }
+}
+
+.has-error #priv + * {
+    color: #a94442 !important;
+}
+
+#priv + ::before {
+    border: 2px solid;
+    content: "";
+    height: 1rem;
+    left: 0;
+    position: absolute;
+    top: .125rem;
+    width: 1rem;
+}
+
+#priv:checked + ::before {
+    background: currentColor;
+}
+
+#privp a {
+    color: inherit;
+    font-weight: 700;
+}
+
+#privp a:hover {
+    text-decoration: underline;
+}
+
+#appoint #privp {
+    margin: 0;
+    padding: 0;
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--show-selected-dial-code .iti__flag-container {
+    right: auto;
+    left: 0;
+}
+.iti__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1px;
+}
+.iti * {
+    box-sizing: border-box;
+}
+
+.iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 8px;
+}
+
+/* @media (min-width: 768px) {
+    #appoint {
+        position: relative;
+        min-height: 650px;
+    }
+
+    #appoint > * {
+        position: absolute;
+        right: 2.5rem;
+        width: 360px;
+        z-index: 1;
+    }
+} */
+
+#map {
+    position: relative;
+}
+
+#mapdiv {
+    height: 420px;
+}
+
+@media (min-width: 768px) {
+    #mapdiv {
+        height: 650px;
+    }
+}
+
+@media (min-width:768px) {
+    #mapdiv::after {
+        padding: 0 50% 0 5% !important;
+    }
+}

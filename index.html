@@ -5,9 +5,1184 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hepatit-test</title>
+    <link rel="stylesheet" href="/src/css/global.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/banner.css">
+    <link rel="stylesheet" href="/src/css/article.css">
+    <link rel="stylesheet" href="/src/css/after-article.css">
+    <link rel="stylesheet" href="/src/css/appointment.css">
+    <link rel="stylesheet" href="/src/css/contact.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/responsive.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header id="headmain">
+        <div>
+
+            <div id="alrt_container" style="width:100%;">
+
+                <style>
+                    #alrt_container {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: medium;
+                        line-height: normal;
+                    }
+
+                    .banner {
+                        margin-top: -1px !important;
+                    }
+                </style>
+            </div>
+
+
+            <nav class="head navtop" style="/* When flex. */ order: 1">
+                <ul class="container">
+                    <li data-href="/"><a class="logo" href="/" rel="home"><img height=32
+                                src="https://cdn.mchelp.ru/i/i/t/terapevt/terapevt-logo.svg" width=100></a></li>
+                    <li data-href="tel:8(495)648-62-44"><a class="_t1el0 _c1alltracking"
+                            href="tel:8(495)648-62-44">8(495)648-62-44</a></li>
+                    <li data-href="#headaside"><a href="#headaside"
+                            onclick="if (this.parentNode.querySelector('#headmain *')) return; if (location.hash != hashinit) return history.back(), !1;return location.hash = '#', !1">Ещё</a>
+                    </li>
+                </ul>
+
+                <script>
+                    var hashinit = location.hash;
+                </script>
+
+            </nav>
+
+            <nav class="head navaddr">
+                <ul class="container">
+                    <li data-href="#addr"><a href="#addr">Адрес</a>
+                        <ul>
+                            <li data-href="contacts.html"><a href="#map" class="november_dumb">Москва, ул. Воронцовская,
+                                    35Б</a>
+                            <li data-href="contacts.html"><a href="covid19.html"
+                                    style="float:left; margin-top:5px;"><span
+                                        style="background-color: red; color: #fff; padding:3px; font: 'Roboto' serif;">COVID-19</span><span
+                                        style="background-color: green; color: #fff; padding:3px; font-weight: normal">✓
+                                        Безопасно</span></a>
+                        </ul>
+                    <li data-href="#clock"><span class="november_dumb">Пн-Пт 09:00 - 23:00<br>Cб, Вс 09:00 -
+                            21:00</span>
+                    <li data-href="tel:8(495)648-62-44"><a class="tel0 calltracking" href="tel:8(495)648-62-44"
+                            style="font-weight: bold; font-size: large;">8(495)648-62-44</a>
+                    <li data-href="#appoint"><a href="#appoint" style="font-size: large;"
+                            onclick="goto_appt_form('appt');">Записаться на приём</a>
+                </ul>
+            </nav>
+
+            <nav class="head navmore navmoreme" style="/* When flex. */ order: 1" role="navigation">
+
+                <ul class="container hidden-xs">
+                    <li data-href="#"><a href="/" aria-haspopup="true"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Клиника</a>
+                        <ul class="dropdown" aria-label="submenu">
+
+                            <li style="margin-top: -30px;"><a href="loyal.html">Программа лояльности</a></li>
+                            <li><a href="videoreviews.html">Отзывы пациентов</a></li>
+                            <li><a href="chief.html">Новости клиники</a></li>
+                            <li><a href="terapevt.html">Терапевт</a></li>
+                            <li><a href="homevisit2.html">Вызов терапевта на дом</a></li>
+
+                            <li><a href="day-stationar.html">Дневной стационар</a></li>
+                            <li><a href="home-stationar.html">Стационар на дому</a></li>
+                            <li><a href="home-rehab.html">Реабилитация на дому</a></li>
+
+                            <li><a href="team.html">Видео презентации врачей</a></li>
+                            <li><a href="video.html">Видеоматериалы</a></li>
+                            <li><a href="chief.html">Главный врач</a></li>
+                            <li><a href="legal.html">Лицензия</a></li>
+                            <li><a href="online.html">Запись на прием</a></li>
+                        </ul>
+                    </li>
+
+                    <li data-href="#"><a href="#" aria-haspopup="true"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Отделения</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li style="margin-top: -30px;"><a href="div-terapy.html">Отделение терапии</a></li>
+                            <li><a href="div-urol.html">Отделение урологии</a></li>
+                            <li><a href="div-procto.html">Отделение проктологии</a></li>
+                            <li><a href="div-hirur.html">Отделение хирургии</a></li>
+                            <li><a href="div-massage.html">Отделение массажа</a></li>
+                            <li><a href="div-onko.html">Отделение онкологии</a></li>
+                            <li><a href="div-diagnos.html">Отделение диагностики</a></li>
+                            <li><a href="div-cardio.html">Отделение кардиологии</a></li>
+                            <li><a href="div-gin.html">Отделение гинекологии</a></li>
+                            <li><a href="div-mammol.html">Отделение маммологии</a></li>
+                            <li><a href="div-pain.html">Отделение лечения боли</a></li>
+                            <li><a href="div-pulmo.html">Отделение пульмонологии</a></li>
+                            <li><a href="div-ortoped.html">Отделение травматологии и ортопедии</a></li>
+                            <li><a href="lechenie-pecheni.html">Лечение и диагностика печени</a></li>
+                            <li><a href="ochishenie-pecheni.html">Очищение печени</a></li>
+                            <li><a href="gepatolog.html">Прием гепатолога</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li data-href="#"><a href="#" aria-haspopup="true"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Диагностика</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li style="margin-top: -30px;"><a href="spirometriya.html">Спирометрия</a></li>
+                            <li><a href="pulsoximetriya.html">Пульсоксиметрия</a></li>
+                            <li><a href="mamografiya.html">РТМ маммография</a></li>
+                            <li><a href="ekg.html">Электрокардиограмма</a></li>
+                            <li><a href="nls.html">NLS-графия организма</a></li>
+                            <li><a href="rentgenografiya.html">Рентгенография цифровая</a></li>
+                            <li><a href="panelanalisi.html">Лабораторная диагностика</a></li>
+                            <li><a href="mamografiya.html">Маммография рентгеновская</a></li>
+                            <li><a href="ktrazreshenia.html">Компьютерная томография / КТ</a></li>
+                            <li><a href="uzi.html">Ультразвуковая диагностика / УЗИ</a></li>
+                            <li><a href="checkup.html">Программы профосмотра</a></li>
+                            <li><a href="mri.html">Магнитно-резонансная диагностика</a></li>
+                            <li><a href="elastometry.html">Эластометрия</a></li>
+                        </ul>
+                    </li>
+
+                    <li data-href="#"><a href="#" aria-haspopup="true"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Услуги</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li style="margin-top: -30px;"><a href="vip.html">VIP отделение</a></li>
+                            <li><a href="day-hospital.html">Дневной стационар</a></li>
+                            <li><a href="urgent.html">Срочный прием врача</a></li>
+                            <li><a href="ivdrips.html">IV-терапия / Капельницы</a></li>
+                            <li><a href="remote.html">Дистанционная консультация</a></li>
+                            <li><a href="aliens.html">Лечение иногородних пациентов</a></li>
+                            <li><a href="sudden-death.html">Индекс оценки риска смерти</a></li>
+                            <li><a href="dislipidemia.html">Лечение дислипидемии</a></li>
+                            <li><a href="zhirovoi-gepatoz.html">Лечение жирового гепатоза</a></li>
+                            <li><a href="gepatit-b.html">Лечение гепатита B (Б)</a></li>
+                            <li><a href="alkogolnyy-gepatoz.html">Лечение алкогольного гепатоза</a></li>
+                            <li><a href="gidrocolon.html">Гидроколонотерапия</a></li>
+                            <li><a href="detox-bogdanova.html">Очищение организма. Детокс</a></li>
+                        </ul>
+                    </li>
+
+                    <li data-href="price.html"><a href="price.html" aria-haspopup="true"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Цены</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li style="margin-top: -30px;"><a href="price.html">Прейскурант</a></li>
+                            <li><a href="payment.html" target="_blank">Онлайн оплата</a></li>
+                            <li><a href="sale.html">Спец.предложения</a></li>
+                            <li><a href="loyal.html">Дисконтная программа</a></li>
+                        </ul>
+                    </li>
+
+                    <li data-href="contacts.html"><a href="contacts.html"
+                            style="text-decoration: 1underline; text-decoration-style: 1wavy; background: #016a77; color: #fff; padding: 10px; border-radius: 8px; margin-bottom: 5px;">Контакты</a>
+                    </li>
+                    <li data-href="#"><a href="#">&nbsp;</a></li>
+                </ul>
+
+                <!--mms-->
+
+                <div class="hidden-lg hidden-md hidden-sm" style="padding-top: 10px;">
+
+                    <input class="accordion-input" type="checkbox" />
+                    <label class="accordion-label" onclick="javascript:title_m('title5l')">Клиника ▼</label>
+                    <div class="content-accordion content-accordion-m navmoreme2 title5l">
+                        <ul>
+                            <li><a href="loyal.html">Программа лояльности</a></li>
+                            <li><a href="videoreviews.html">Отзывы пациентов</a></li>
+                            <li><a href="chief.html">Новости клиники</a></li>
+                            <li><a href="terapevt.html">Терапевт</a></li>
+                            <li><a href="homevisit2.html">Вызов терапевта на дом</a></li>
+
+                            <li><a href="day-stationar.html">Дневной стационар</a></li>
+                            <li><a href="home-stationar.html">Стационар на дому</a></li>
+                            <li><a href="home-rehab.html">Реабилитация на дому</a></li>
+
+                            <li><a href="team.html">Видео презентации врачей</a></li>
+                            <li><a href="video.html">Видеоматериалы</a></li>
+                            <li><a href="chief.html">Главный врач</a></li>
+                            <li><a href="legal.html">Лицензия</a></li>
+                            <li><a href="online.html">Запись на прием</a></li>
+                        </ul>
+                    </div>
+
+                    <input class="accordion-input" type="checkbox" />
+                    <label class="accordion-label" onclick="javascript:title_m('title5l1')">Отделения ▼</label>
+                    <div class="content-accordion content-accordion-m navmoreme2 title5l1">
+                        <ul>
+                            <li><a href="div-terapy.html">Отделение терапии</a></li>
+                            <li><a href="div-urol.html">Отделение урологии</a></li>
+                            <li><a href="div-procto.html">Отделение проктологии</a></li>
+                            <li><a href="div-hirur.html">Отделение хирургии</a></li>
+                            <li><a href="div-massage.html">Отделение массажа</a></li>
+                            <li><a href="div-onko.html">Отделение онкологии</a></li>
+                            <li><a href="div-diagnos.html">Отделение диагностики</a></li>
+                            <li><a href="div-cardio.html">Отделение кардиологии</a></li>
+                            <li><a href="div-gin.html">Отделение гинекологии</a></li>
+                            <li><a href="div-mammol.html">Отделение маммологии</a></li>
+                            <li><a href="div-pain.html">Отделение лечения боли</a></li>
+                            <li><a href="div-pulmo.html">Отделение пульмонологии</a></li>
+                            <li><a href="div-ortoped.html">Отделение травматологии и ортопедии</a></li>
+                            <li><a href="lechenie-pecheni.html">Лечение и диагностика печени</a></li>
+                            <li><a href="ochishenie-pecheni.html">Очищение печени</a></li>
+                            <li><a href="gepatolog.html">Прием гепатолога</a></li>
+                            <li><a href="gepatoz.html">Гепатоз</a></li>
+                        </ul>
+                    </div>
+
+                    <input class="accordion-input" type="checkbox" />
+                    <label class="accordion-label" onclick="javascript:title_m('title7l')">Диагностика ▼</label>
+                    <div class="content-accordion content-accordion-m navmoreme2 title7l">
+                        <ul>
+                            <li><a href="spirometriya.html">Спирометрия</a></li>
+                            <li><a href="pulsoximetriya.html">Пульсоксиметрия</a></li>
+                            <li><a href="mamografiya.html">РТМ маммография</a></li>
+                            <li><a href="ekg.html">Электрокардиограмма</a></li>
+                            <li><a href="nls.html">NLS-графия организма</a></li>
+                            <li><a href="rentgenografiya.html">Рентгенография цифровая</a></li>
+                            <li><a href="panelanalisi.html">Лабораторная диагностика</a></li>
+                            <li><a href="mamografiya.html">Маммография рентгеновская</a></li>
+                            <li><a href="ktrazreshenia.html">Компьютерная томография / КТ</a></li>
+                            <li><a href="uzi.html">Ультразвуковая диагностика / УЗИ</a></li>
+                            <li><a href="checkup.html">Программы профосмотра</a></li>
+                            <li><a href="mri.html">Магнитно-резонансная диагностика</a></li>
+                            <li><a href="elastometry.html">Эластометрия</a></li>
+                        </ul>
+                    </div>
+
+                    <input class="accordion-input" type="checkbox" />
+                    <label class="accordion-label" onclick="javascript:title_m('title6l')">Услуги ▼</label>
+                    <div class="content-accordion content-accordion-m navmoreme2 title6l">
+                        <ul>
+                            <li><a href="vip.html">VIP отделение</a></li>                            
+                            <li><a href="day-hospital.html">Дневной стационар</a></li>
+                            <li><a href="urgent.html">Срочный прием врача</a></li>
+                            <li><a href="ivdrips.html">IV-терапия / Капельницы</a></li>
+                            <li><a href="remote.html">Дистанционная консультация</a></li>
+                            <li><a href="aliens.html">Лечение иногородних пациентов</a></li>
+                            <li><a href="sudden-death.html">Индекс оценки риска смерти</a></li>
+                            <li><a href="dislipidemia.html">Лечение дислипидемии</a></li>
+                            <li><a href="gidrocolon.html">Гидроколонотерапия</a></li>                           
+                        </ul>
+                    </div>
+
+                    <input class="accordion-input" type="checkbox" />
+                    <label class="accordion-label" onclick="javascript:title_m('title9l')">Цены ▼</label>
+                    <div class="content-accordion content-accordion-m navmoreme2 title9l">
+                        <ul>
+                            <li><a href="price.html">Прейскурант</a></li>
+                            <li><a href="payment.html" target="_blank">Онлайн оплата</a></li>
+                            <li><a href="sale.html">Спец.предложения</a></li>
+                            <li><a href="loyal.html">Дисконтная программа</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="hidden-lg hidden-md hidden-sm" style="padding: 10px;">
+
+                </div>
+
+                <div class="hidden-lg hidden-md hidden-sm"
+                    style="border-top: 1px solid rgba(255, 255, 255, .25); padding: 10px; padding-left: 25px">
+                    <h4><a href="https://vk.com/id889963946" target="_blank" style="color:#fff;">Мы ВКонтакте</a></h4>
+                    <h4><a href="https://cntc.me/medkarta" target="_blank" style="color:#fff;">Построить маршрут</a>
+                    </h4>
+                </div>
+
+                <div class="hidden-lg hidden-md hidden-sm"
+                    style="border-top: 1px solid rgba(255, 255, 255, .25); padding: 10px;">
+                    <br><br>
+                </div>
+
+
+                <!--mme-->
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+    <!-- БАННЕР -->
+    <section class="banner mncntnt">
+        <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img src="https://cdn.mchelp.ru/assets/banners/gepatit-b.jpg" alt="hero">
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
+                <div class="container learn-more" style="width:100%">
+                    <h1>Вирусный гепатит B (Б)</h1>
+                    <p>Вирус поражает печень и без лечения способен вызвать серьезную интоксикацию и опасные последствия. Своевременное обследование помогает выявить заболевание на ранней стадии.</p>
+                    <div class="plank">
+                        Лечение, диагностика ежедневно и без выходных!
+                    </div>
+                    <h3 style="margin: 30px 0 20px 0;"><span>Телефон регистратуры:</span> <span><a
+                                href="tel:+74956486244">+7(495)648-62-44</a></span></h3>
+                    <a class="btn btn-orange" href="#appoint">Записаться на прием</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="headoffset whoheal" id="doctors" myname="maincontent">
+    <div class="shadow">
+        <div class="container maincontent p-4 bg-white">
+
+      <main class="slides gepatit-deck">
+
+                    <section class="gepatit-slide gepatit-hero">
+                        <div class="gepatit-hero-copy">
+                            <h2 class="heading2">Невидимая угроза для вашей печени: Вирусный гепатит B</h2>
+                            <p>Инфекционное заболевание, при котором печень
+                                поражается специфическим вирусом. Протекает от бессимптомного носительства до
+                                тяжелейших форм интоксикации.</p>
+                            <div class="gepatit-warning"><span>!</span> Главная опасность — огромная
+                                распространенность в мире.</div>
+                        </div>
+                        <img src="https://cdn.mchelp.ru/assets/articles/gepatit-b-doctor-monitor.jpg" alt="Врач у медицинского монитора">
+                    </section>
+
+                    <section class="gepatit-slide gepatit-two-col">
+                        <figure class="gepatit-photo-frame"><img src="https://cdn.mchelp.ru/assets/articles/gepatit-b-cells.jpg" alt="Вирус и клетки">
+                        </figure>
+                        <div class="gepatit-content">
+                            <h2 class="heading2">Разрушительное воздействие<br>на клеточном уровне</h2>
+                            <p>Попадая в организм, возбудитель гепатита целенаправленно атакует печень.</p>
+                            <ul class="gepatit-check-list">
+                                <li>Вирус скапливается в железистых клетках</li>
+                                <li>Происходит активное размножение патогена</li>
+                                <li>Начинаются структурные изменения ткани печени</li>
+                                <li>Заболевание может привести к развитию цирроза и угрозе жизни</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide">
+                        <h2 class="heading2">Пути передачи инфекции: Биологические жидкости</h2>
+                        <div class="gepatit-transmission-grid">
+                            <article class="gepatit-transmission-1">
+                                <span>01</span>
+                                <h3>Внутриутробное заражение</h3>
+                                <p>Передача вируса от матери к ребенку.</p>
+                            </article>
+                            <article class="gepatit-transmission-2">
+                                <span>02</span>
+                                <h3>Переливание крови</h3>
+                                <p>От зараженного пациента.</p>
+                            </article>
+                            <article class="gepatit-transmission-3">
+                                <span>03</span>
+                                <h3>Медицинские процедуры</h3>
+                                <p>При нарушении строгих правил стерилизации.</p>
+                            </article>
+                            <article class="gepatit-transmission-4">
+                                <span>04</span>
+                                <h3>Незащищенный контакт</h3>
+                                <p>Половой акт с носителем вируса.</p>
+                            </article>
+                            <article class="gepatit-transmission-5">
+                                <span>05</span>
+                                <h3>Общие шприцы</h3>
+                                <p>Использование одного шприца несколькими людьми.</p>
+                            </article>
+                            <article class="gepatit-transmission-6">
+                                <span>06</span>
+                                <h3>Открытые раны</h3>
+                                <p>Попадание крови или спермы через порезы и травмы.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide gepatit-timeline-slide">
+                        <h2 class="heading2">Скрытое развитие болезни</h2>
+                        <div class="gepatit-timeline">
+                            <article>
+                                <h3>Старт</h3>
+                                <p>Момент инфицирования.</p>
+                            </article>
+                            <article>
+                                <h3>Инкубационный период</h3>
+                                <p>От 30 до 200 дней. Вирус активно размножается, но симптомы отсутствуют.</p>
+                            </article>
+                            <article>
+                                <h3>Появление первых симптомов</h3>
+                                <p>Переход в активную фазу интоксикации.</p>
+                            </article>
+                            <article>
+                                <h3>Желтушный период</h3>
+                                <p>Видимые системные поражения организма.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide gepatit-two-col gepatit-jaundice">
+                        <img class="gepatit-bleed-photo" src="https://cdn.mchelp.ru/assets/articles/gepatit-b-jaundice-eye.jpg" alt="Желтизна склеры глаза">
+                        <div class="gepatit-content">
+                            <h2 class="heading2">Желтушный период<br>и системные сбои</h2>
+                            <div class="gepatit-stack-list">
+                                <article><b>Главный маркер</b><span>Изменение окраски кожи и склер глаз.</span>
+                                </article>
+                                <article><b>Болевой синдром</b><span>Боль в правом подреберье, мышечные
+                                        спазмы.</span></article>
+                                <article><b>Пищеварение</b><span>Горечь во рту, потеря веса.</span></article>
+                                <article><b>Кожа</b><span>Сильный кожный зуд, отечность тела.</span></article>
+                                <article><b>Жизненные показатели</b><span>Снижение пульса, повышение температуры,
+                                        падение давления.</span></article>
+                            </div>
+                        </div>
+                    </section>                
+
+                    <section class="gepatit-slide gepatit-complications">
+                        <h2 class="heading2">Цена упущенного времени: Тяжелые осложнения</h2>
+                        <div class="gepatit-comp-grid">
+                            <article>Цирроз печени</article>
+                            <article>Онкологические поражения печени</article>
+                            <article>Печеночная энцефалопатия</article>
+                            <article>Массивный геморрагический синдром</article>
+                            <article>Острая печеночная недостаточность</article>
+                            <article>Сепсис и вторичная бактериальная инфекция</article>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide">
+                        <h2 class="heading2">Ваш алгоритм действий при подозрении на вирус</h2>
+                        <div class="gepatit-steps-grid">
+                            <article><span>1</span>
+                                <h3>Не занимайтесь самолечением!</h3>
+                                <p>Только врач может поставить точный диагноз и назначить адекватную терапию.</p>
+                            </article>
+                            <article><span>2</span>
+                                <h3>Проведите полную диагностику!</h3>
+                                <p>Необходимо лабораторное и аппаратное обследование печени.</p>
+                            </article>
+                            <article><span>3</span>
+                                <h3>Не откладывайте лечение!</h3>
+                                <p>Чем раньше начата терапия, тем выше шансы на полное выздоровление.</p>
+                            </article>
+                            <article><span>4</span>
+                                <h3>Обратитесь в клинику!</h3>
+                                <p>Запишитесь к профильным специалистам для оценки состояния здоровья.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide gepatit-two-col gepatit-diagnostics">
+                        <img class="gepatit-bleed-photo" src="https://cdn.mchelp.ru/assets/articles/gepatit-b-ultrasound.jpg" alt="УЗИ диагностика">
+                        <div class="gepatit-content">
+                            <h2 class="heading2">Точная аппаратная<br>и лабораторная диагностика</h2>
+                            <p>Определение типа вируса и оценка реального состояния вашей печени.</p>
+                            <div class="gepatit-stack-list gepatit-blue-icons">
+                                <article><b>Лабораторные исследования</b><span>Точное выявление маркеров гепатита B
+                                        в крови.</span></article>
+                                <article><b>Аппаратная диагностика</b><span>УЗИ и сканирование для оценки
+                                        структурных изменений тканей.</span></article>
+                                <article><b>Постановка диагноза</b><span>Формирование полной картины заболевания для
+                                        выбора тактики лечения.</span></article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="gepatit-slide gepatit-therapy">
+                        <img src="https://cdn.mchelp.ru/assets/articles/gepatit-b-doctor-consult.jpg" alt="Консультация врача с пациентом">
+                        <div class="gepatit-therapy-card">
+                            <h2 class="heading2">Комплексная терапия: Путь к восстановлению</h2>
+                            <p>Лечение острой и хронической формы проводится комплексно. Выздоровление зависит от
+                                пути проникновения вируса и индивидуальных особенностей пациента.</p>
+                            <div class="gepatit-therapy-grid">
+                                <article>
+                                    <h3>Устранение инфекции</h3>
+                                    <p>Подавление активности вируса современными препаратами.</p>
+                                </article>
+                                <article>
+                                    <h3>Восстановление печени</h3>
+                                    <p>Возврат полной работоспособности железы.</p>
+                                </article>
+                                <article>
+                                    <h3>Хирургическое вмешательство</h3>
+                                    <p>Применяется в крайних случаях, например при развитии асцита.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </section>                   
+
+                    <section class="gepatit-slide gepatit-liver-steps">
+                        <h2 class="heading2">Три шага к здоровой печени</h2>
+                        <img src="https://cdn.mchelp.ru/assets/articles/gepatit-b-liver.png" alt="Печень">
+                        <article class="gepatit-step-card gepatit-left">
+                            <div>
+                                <span>1</span>
+                                <h3>Раннее выявление</h3>
+                            </div>
+                            <p>Внимание к сигналам организма и регулярный скрининг.</p>
+                        </article>
+                        <article class="gepatit-step-card gepatit-right">
+                            <div>
+                                <span>2</span>
+                                <h3>Современная диагностика</h3>
+                            </div>
+                            <p>Использование передового лабораторного и аппаратного оборудования.</p>
+                        </article>
+                        <article class="gepatit-step-card gepatit-bottom">
+                            <div>
+                                <span>3</span>
+                                <h3>Комплексное терапия</h3>
+                            </div>
+                            <p>Индивидуальный протокол лечения от команды специалистов.</p>
+                        </article>
+                    </section>
+
+                    <div style="border: 2px double #00a7bc; padding: 0 20px 20px 20px; margin: 50px 0;">
+                        <h3 class="heading21">РАСЧЕТАЙТЕ ПЕРЕД ПРИЕМОМ ВРАЧА ГЕПАТОЛОГА ЧЕК – ЛИСТ!</h3>
+                        <p>Спокойно, без спешки заполните его для врача. В случае отсутствия технической возможности, можно заполнить
+                        его в клинике за 10 минут до приема.</p>
+                        <div style="width:100%;text-align:center;"><a class="btn btn-orange"
+                            href="https://cdn.mchelp.ru/i/news/gepatolog-checklist.pdf" target="_blank">Скачать Чек-лист</a></div>
+                    </div>
+
+                    <section class="gepatit-slide gepatit-cta">
+                        <img src="https://cdn.mchelp.ru/assets/articles/gepatit-b-doctor-smile.jpg" alt="Врач в клинике">
+                        <div class="gepatit-cta-card">
+                            <h2 class="heading2">Мы обязательно поможем. Сделайте первый шаг сегодня.</h2>
+                            <p>Узнать больше о заболеваниях печени и пройти полную диагностику можно у наших
+                                гепатологов ежедневно, без выходных!</p>
+                            <a class="btn btn-orange" href="#appoint">Записаться на прием</a>
+                            <small>Здоровье начинается с диагностики. Запишитесь на анализ уже сейчас!</small>
+                        </div>
+                    </section>
+                </main>
+        </div>
+    </div>
+    </section>
+
+    <section class="about headoffset" id="trig">
+    <div class="shadow why-us">
+        <div class="container">
+
+            <h2 class="heading">Почему нужно обратиться к нам?</h2>
+
+            <div class="row row-flex triggers">
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-01.png"
+                            alt="Мы нацелены на результат">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Мы нацелены на результат</div>
+                        <p>Наша концепция комплексного лечения организма нацелена на 100% результат.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-02.png"
+                            alt="Современные медицинские услуги">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Современные медицинские услуги</div>
+                        <p>Анализы, диагностика, лечение - оказываем весь комплекс услуг.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-03.png"
+                            alt="Инновации на службе у науки">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Инновации на службе у науки</div>
+                        <p>Используем достижения современной науки и разработки ученых РФ и Японии.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-04.png"
+                            alt="Помогаем всем обратившимся">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Помогаем всем обратившимся</div>
+                        <p>Берем на лечение пациентов, даже если от них отказались в других учреждениях.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-05.png"
+                            alt="Программа «Второе мнение врача»">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Программа «Второе мнение врача»</div>
+                        <p>Развеем ваши сомнения в поставленном диагнозе или назначенном лечении.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 trigger">
+                    <div class="img">
+                        <img
+                            src="https://cdn.mchelp.ru/i/i/t/pulmonolog/benefit-06.png"
+                            alt="Удобное расположение">
+                    </div>
+                    <div class="description">
+                        <div class="caption">Удобное расположение</div>
+                        <p>Центр Москвы, 2 мин. от метро, гостиница для пациентов и родственников.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="headoffset doctors" id="gal">
+    <div class="shadow">
+        <div class="container galctr">
+
+            <h2 class="heading">Наши врачи</h2>
+
+            <div class="gal row">
+                <a class="galbtn galprev" href="#"></a>
+                <ul class="galitems">
+
+                    <li>
+                        <a href="#">
+                            <img src="https://cdn.mchelp.ru/i/webp/pic_0128.webp" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="https://cdn.mchelp.ru/i/webp/pic_0081.webp" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="https://cdn.mchelp.ru/i/webp/pic_0019.webp" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="https://cdn.mchelp.ru/i/webp/pic_0062.webp" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+                <a class="galbtn galnext" href="#"></a>
+
+                <ul class="galthumbs">
+
+                    <li class="active">
+                        <img src="https://cdn.mchelp.ru/i/webp/pic_0128.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/pic_0081.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/pic_0019.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/pic_0062.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/footer-slider-01.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/footer-slider-02.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/footer-slider-03.webp" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.mchelp.ru/i/webp/footer-slider-04.webp" alt="">
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="appointment-map">
+
+    <!-- <div class="appointment" id="appointment">
+
+        <form class="headoffset" id="appoint">
+
+            <div id="div_appt">
+
+                <h2 class="heading">Записаться на прием</h2>
+
+                <h2 class="heading appointment-subtitle">
+                    или вызвать врача на дом
+                </h2>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Как к Вам обращаться?">
+                    <label>Ваше имя</label>
+                    <img alt="" height="36" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHkSURBVEiJpdY/T1RREAXw310gETW0JCQQCk0IIDTwZSitbeigtLDxO2BhRWlDZQelRAgSI8TGxES0EvmTGF3G4s2Sjbx9wHKTKXbmzDlz582drIjQZGjhGTbwLW0jfa1r868hn8AWIu1nWuf3Fib6EsAg3iXRW8yipM2mLxIz2I/AShK8QamJl4wFVvoR2MFfjDZgRhOzcysBDOMP9m4wBHuJHa6Lt9SfYQzguEe8+xwndrg22lDZPk4aP2A1CCfY74XpdQPYxEOsNmBWE7PZE9FQ3SSOVP1d1jVJqglaztgRJvt9aIs4U43iIV6nHabvDItNHIO9blZKKZjBOe7jcVr3OcdMKWU7sqIrPHX+UsoTvMIC2viI7TTpX8C0aoK28TQiPlwhq2nLFH5kC95jrqGFc4mJzJlq/Aaq5fY1E55j6AYPbSixkbkTTQLrCVy7jrhGaC1z12sFsp9tfMFIHwIjmdvGdJ1Ap4Kl25J3cSz934Hu4G4Gx+8gMJ4cux1fiQillJbq0fyKiNG6eb7pKaV8z3Y9iIiLzi4awz0c3IU8z0FyjUHnagM4xW/M36FF88lxioHLVRER7VLKS9U875RSPuPilpW38Ei1CF9ERPvyBqneUm3IT0ket7SLzF3W9XfmH7FelHsi3KAdAAAAAElFTkSuQmCC" width="24">
+                </div>
+
+                <div class="form-group">
+                  <div class="iti__flag-container"><div class="iti__selected-flag" role="combobox" aria-haspopup="listbox" aria-controls="iti-0__country-listbox" aria-expanded="false" aria-label="Selected country" tabindex="0" title="Russia: +7"><div class="iti__flag iti__ru"></div><div class="iti__arrow"></div></div><div class="iti__dropdown-content iti__hide" style="width: 432px;"><input type="text" class="iti__search-input" placeholder="Search"><ul class="iti__country-list" id="iti-0__country-listbox" role="listbox" aria-label="List of countries"><li id="iti-0__item-ru" class="iti__country iti__standard iti__highlight" tabindex="-1" role="option" data-dial-code="7" data-country-code="ru" aria-selected="false"><div class="iti__flag-box"><div class="iti__flag iti__ru"></div></div><span class="iti__country-name">Russia</span><span class="iti__dial-code">+7</span></li></ul></div></div>
+                    <input class="form-control" type="tel" placeholder="Ваш телефон">
+                    <label>Ваш телефон</label>
+                    <img alt="Ваш телефон" height="36" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJWSURBVEiJpdVLbE1BHAbwnz5IGqIi2IgGiUfSeKysaiGVYCF2RBDSRBGJ18JCijbCitjQNiopEiESsbFwbSQ2urERUotqWHgvVNOmlF6LmZOenp4rt3zJuffMmZnv+8//Nfwb1uIinmMARYygFzewFdMkP1PEAVzBZzzGa3zDTNShAfW4h+15BCfRhYqcuYX4gWuo/osRuzCGndkTnEZrfO/EQeH4CY7hAhZgBvblkD9BD55iMEteRBuaowUdJrrxFl7F91WRIPscjfOX8SHZ2BLJiynSPJGHeJRjdR5O4GcVmqLVbXiP9rjgYCS+GoUPYRiL43wdzuUQ34mGzMVQVVR6gDNxQXKKIj5GkU9x3ItGVGI6luYIzIn/y+N6I8b9lmC/4J4izqa+r4vfducQp7FYOO0peCsUTRpNOeQJ7uIXzsfxIizBMmwU3PYF/agl5PRbE/P6OvpKWFctBLoPt42fNHkGhBSfn2xYjd84kiLZERc3lBDpjPNfcRhbsEHwe2WpDcNCbhOquEcIUm3O+g7cxLwSBkxCDV4IfWVW/FaP7yigKrN+dmZcVk9bKVRiQWgDsBmj6M4RSdAq1E5ZIo1C2t5PEe6NIgWT3dUqxGJsKiLbUlYnGzYJ7urF+gz5aeNtpWyRPUJmdadOUo9nkfRNyvJs75qSyKjgriQmFcIl0iW06mxDbI7C7VmyUtgmxKRgPLuySIu0RYGWcgUIgR8UUnj1X0SSSp4SeYIVQp0MCxWfvS7/yfIsaoSK/413uITjQqv/b/I01ggNsh9DeCn/bgZ/AMHgp5/qc9dCAAAAAElFTkSuQmCC" width="24">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Выберите удобный для Вас день">
+                    <label>Дата</label>
+                    <img alt="" height="49" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHYSURBVEiJ3dY9a1RBFAbgZ2OC+BGjBoyYVgvRGDAWBruAqGkECz9AUGy0jVb+Af0PBgIBwU7EwkIkhZBaJK424jYGNWbVEFeJBtdizrKb69WN66bxheHOnHnnPffMmTn3ko8RvMbQb+YbcSi4I3mTnZnxeuzCcfTH82MTB8cauK/wBktZ0jaMo4LqP7YKbmErFLAF09iPRTzFTuzGC8w2iaAfe/ESbzGIbszgCNwMz4+wPRZdD9vlJuKCU4010IupsN3owNkYXMSHIFUyzz8hyy3jQvTPwLJft6EHl7BxFQ424UqsacQslgvS2y/izirE/gbn0F1zsGao3YN3ON9m7dvoI0VQarO40Kx2rIHwCuQ5GMInKbJ57Av7uPptnQjbnuBUY81wVixbi0gnqiTd8LJ6LXov1RpScYMv0nFciFbOi+L/y0FbkZeDDVIt6ZH2dBLfcRBHg/MQT9AV3F4pB5P4mhXM5mDUyvp+OOyPG2xTYRvOcEcbdEqoFvBNOil9MdGFUxHBPO7hBwbUj+E0iliH01L9X8DdiBbmQkMxvA/kbFerGAzNGbgWgyIOtEn8eWiOFaRE38eJIMzhc4vim7Ej+g9wsjbRiat4Jv0RtPrBXwqNsdD0E4c8m0FLu9ZqAAAAAElFTkSuQmCC" width="24">
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Интересующее направление (не обязательно)</option>
+                        <option>Консультация врача</option>
+                        <option>Диагностика и анализы</option>
+                        <option>Второе мнение врача</option>
+                        <option>Другой вопрос</option>
+                    </select>
+                    <label>Направление</label>
+                </div>
+
+                <div class="form-group form-consent">
+                    <input id="priv" type="checkbox">
+                    <label for="priv">
+                        Согласен на обработку своих
+                        <a href="#">персональных данных</a>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-orange" type="button">
+                        Отправить заявку
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div> -->
+
+    <div id="_div_appt" style="display: block;">
+            <form class="headoffset" id="appoint" action="" method="post" style="z-index:9999;">
+
+                <div id="div_appt">
+
+                    <h2 class="heading" id="appt_form_heading">Записаться на прием</h2>
+                    <h2 class="heading" id="appt_form_heading2" style="font-size: large;">или вызвать врача на дом</h2>
+
+                    <p class=form-group data-name=name>
+                        <input class=form-control name=name placeholder="Как к Вам обращаться?" required="required"
+                            autocomplete="name">
+                        <label>Ваше имя</label>
+                        <img alt="" height=36
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHkSURBVEiJpdY/T1RREAXw310gETW0JCQQCk0IIDTwZSitbeigtLDxO2BhRWlDZQelRAgSI8TGxES0EvmTGF3G4s2Sjbx9wHKTKXbmzDlz582drIjQZGjhGTbwLW0jfa1r868hn8AWIu1nWuf3Fib6EsAg3iXRW8yipM2mLxIz2I/AShK8QamJl4wFVvoR2MFfjDZgRhOzcysBDOMP9m4wBHuJHa6Lt9SfYQzguEe8+xwndrg22lDZPk4aP2A1CCfY74XpdQPYxEOsNmBWE7PZE9FQ3SSOVP1d1jVJqglaztgRJvt9aIs4U43iIV6nHabvDItNHIO9blZKKZjBOe7jcVr3OcdMKWU7sqIrPHX+UsoTvMIC2viI7TTpX8C0aoK28TQiPlwhq2nLFH5kC95jrqGFc4mJzJlq/Aaq5fY1E55j6AYPbSixkbkTTQLrCVy7jrhGaC1z12sFsp9tfMFIHwIjmdvGdJ1Ap4Kl25J3cSz934Hu4G4Gx+8gMJ4cux1fiQillJbq0fyKiNG6eb7pKaV8z3Y9iIiLzi4awz0c3IU8z0FyjUHnagM4xW/M36FF88lxioHLVRER7VLKS9U875RSPuPilpW38Ei1CF9ERPvyBqneUm3IT0ket7SLzF3W9XfmH7FelHsi3KAdAAAAAElFTkSuQmCC"
+                            width=24>
+
+                    <p class=form-group data-name=telephone>
+                        <input placeholder="8 (912) 345-67-89"
+    type="tel"
+    class="form-control"
+    name="telephone"
+    autocomplete="tel"
+    id="appt_form_phone"
+>
+
+                        <label>Ваш телефон</label>
+                        <img alt="Ваш телефон" height=36
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJWSURBVEiJpdVLbE1BHAbwnz5IGqIi2IgGiUfSeKysaiGVYCF2RBDSRBGJ18JCijbCitjQNiopEiESsbFwbSQ2urERUotqWHgvVNOmlF6LmZOenp4rt3zJuffMmZnv+8//Nfwb1uIinmMARYygFzewFdMkP1PEAVzBZzzGa3zDTNShAfW4h+15BCfRhYqcuYX4gWuo/osRuzCGndkTnEZrfO/EQeH4CY7hAhZgBvblkD9BD55iMEteRBuaowUdJrrxFl7F91WRIPscjfOX8SHZ2BLJiynSPJGHeJRjdR5O4GcVmqLVbXiP9rjgYCS+GoUPYRiL43wdzuUQ34mGzMVQVVR6gDNxQXKKIj5GkU9x3ItGVGI6luYIzIn/y+N6I8b9lmC/4J4izqa+r4vfducQp7FYOO0peCsUTRpNOeQJ7uIXzsfxIizBMmwU3PYF/agl5PRbE/P6OvpKWFctBLoPt42fNHkGhBSfn2xYjd84kiLZERc3lBDpjPNfcRhbsEHwe2WpDcNCbhOquEcIUm3O+g7cxLwSBkxCDV4IfWVW/FaP7yigKrN+dmZcVk9bKVRiQWgDsBmj6M4RSdAq1E5ZIo1C2t5PEe6NIgWT3dUqxGJsKiLbUlYnGzYJ7urF+gz5aeNtpWyRPUJmdadOUo9nkfRNyvJs75qSyKjgriQmFcIl0iW06mxDbI7C7VmyUtgmxKRgPLuySIu0RYGWcgUIgR8UUnj1X0SSSp4SeYIVQp0MCxWfvS7/yfIsaoSK/413uITjQqv/b/I01ggNsh9DeCn/bgZ/AMHgp5/qc9dCAAAAAElFTkSuQmCC"
+                            width=24>
+                        <input type="hidden" id="appoint_hidden_user_num" name="appoint_hidden_user_num">
+                        <input type="hidden" id="appoint_hidden_href" name="appoint_hidden_href">
+                        <input type="hidden" id="appoint_hidden_href_current" name="appoint_hidden_href_current">
+
+                    <p class=form-group data-name=date>
+                        <input
+    class="form-control"
+    name="date"
+    placeholder="Выберите удобный для Вас день"
+    readonly
+>
+                        <label>Дата</label>
+                        <img alt="" height=49
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHYSURBVEiJ3dY9a1RBFAbgZ2OC+BGjBoyYVgvRGDAWBruAqGkECz9AUGy0jVb+Af0PBgIBwU7EwkIkhZBaJK424jYGNWbVEFeJBtdizrKb69WN66bxheHOnHnnPffMmTn3ko8RvMbQb+YbcSi4I3mTnZnxeuzCcfTH82MTB8cauK/wBktZ0jaMo4LqP7YKbmErFLAF09iPRTzFTuzGC8w2iaAfe/ESbzGIbszgCNwMz4+wPRZdD9vlJuKCU4010IupsN3owNkYXMSHIFUyzz8hyy3jQvTPwLJft6EHl7BxFQ424UqsacQslgvS2y/izirE/gbn0F1zsGao3YN3ON9m7dvoI0VQarO40Kx2rIHwCuQ5GMInKbJ57Av7uPptnQjbnuBUY81wVixbi0gnqiTd8LJ6LXov1RpScYMv0nFciFbOi+L/y0FbkZeDDVIt6ZH2dBLfcRBHg/MQT9AV3F4pB5P4mhXM5mDUyvp+OOyPG2xTYRvOcEcbdEqoFvBNOil9MdGFUxHBPO7hBwbUj+E0iliH01L9X8DdiBbmQkMxvA/kbFerGAzNGbgWgyIOtEn8eWiOFaRE38eJIMzhc4vim7Ej+g9wsjbRiat4Jv0RtPrBXwqNsdD0E4c8m0FLu9ZqAAAAAElFTkSuQmCC"
+                            width=24>
+
+                    <div class="form-group" id="formgroup_stream">
+                        <div class="smcselect">
+                            <select autocomplete=off class=form-control name=addr>
+                                <option value=0>Интересующее направление (не обязательно)</option>
+                                <option value="Консультация врача">Консультация врача</option>
+                                <!--<option value="Вызов врача на дом">Вызов врача на дом</option>-->
+                                <option value="Диагностика и анализы">Диагностика и анализы</option>
+                                <option value="Второе мнение врача">Второе мнение врача</option>
+                                <option value="Другой вопрос">Другой вопрос</option>
+                            </select>
+                        </div>
+                        <label>Направление</label>
+                    </div>
+
+                    <p class=form-group data-name=priv id=privp>
+                        <input id=priv name=priv type=checkbox required="required">
+                        <label for=priv>Согласен на обработку своих <a href="https://cdn.mchelp.ru/i/legal/pdn.pdf"
+                                rel="noopener noreferrer" target=_blank>персональных данных</a></label>
+
+                    <p class=form-group data-name=go>
+                        <button class="btn btn-orange" id="appointgo" style="cursor:pointer;">Отправить заявку</button>
+                </div>
+            </form>
+
+        </div>
+
+    <div class="headoffset" id="map">
+        <div>
+            <div id="mapdiv"></div>
+        </div>
+    </div>
+
+</section>
+
+<section class="shadow contacts" id="addrs">
+
+    <div class="container">
+
+        <h2 class="heading">Контакты</h2>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>Адрес и телефон:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/icon-location.png" style="width:100%"
+                                alt="Адрес">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>
+                                    Телефон:
+                                    <a href="tel:8(495)648-62-44">
+                                        8(495)648-62-44
+                                    </a>
+                                </li>
+                                <li>
+                                    Москва,
+                                    ул. Воронцовская 35Б к1
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>График работы:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/schedule-med.png" style="width:100%"
+                                alt="График работы">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>Понедельник - Пятница: 09:00 — 23:00</li>
+                                <li>Суббота и Воскресенье: 09:00 — 21:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>Ближайшие станции метро:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/mosmetrologo.svg" style="width:83%"
+                                alt="Метро">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>Метро Таганская: 12 мин. пешком</li>
+                                <li>Метро Пролетарская: 4 мин. пешком</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>Парковка для автомобилей:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/parkingicon.png" style="width:100%"
+                                alt="Парковка">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>муниципальная</li>
+                                <li>у центра</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>Электронная почта:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/email-logoicon.jpg" style="width:100%"
+                                alt="Электронная почта">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>Главный врач: chief@mchelp.ru</li>
+                                <li>Почта центра: callcenter@mchelp.ru</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="kontakty">
+                    <h2>Запись на прием:</h2>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4 hidden-sm col-lg-3">
+                            <img
+                                src="https://cdn.mchelp.ru/i/i/t/calendar-logoicon.png" style="width:100%"
+                                alt="Запись на прием">
+                        </div>
+
+                        <div class="col-md-9 col-xs-8 col-sm-9 col-lg-9">
+                            <ul>
+                                <li>через регистратуру</li>
+                                <li>на сайте</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section>
+        <div class="container">
+
+            <div class="row" style="position: relative; background: #fafafa; padding: 40px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 0px; margin: 60px 0 0px;">
+
+                <div class="col-md-4" style="text-align: center;">
+                    <h2>Юридическая информация</h2>
+                    <a href="legal.html" class="btn btn-orange" style="cursor:pointer;">Посмотреть документы</a>
+                </div>
+                <div class="col-md-5">
+                    <br>
+                    Мы осуществляем деятельность на основании медицинских лицензий в соответствии с рекомендациями
+                    Минздрава
+                </div>
+                <div class="col-md-3 hidden-xs" style="position: absolute; right: 50px;bottom: 0;">
+                    <img src="https://cdn.mchelp.ru/i/i/legdocfooterimg.webp">
+                </div>
+            </div>
+        </div>
+    </section>
+                <footer class="footer_element_01">
+        <div class=container style=padding:0>
+
+            <nav class=foot id=navqual>
+
+
+                <ul>
+                    <li><a class="logo" href="/" rel="home">
+                            <img alt="" height=31 src="https://cdn.mchelp.ru/i/i/t/terapevt/terapevt-logo.svg"
+                                width=100></a>
+                    </li>
+                    <li>© 2026, ООО МЦ
+                    <li>Лицензия Л041-01137-77/00359642
+                    <li>ОГРН 1177746391547
+                    <li>Информация размещенная на сайте не является публичной офертой!</li>
+                    <li><a href="legal.html" style="border-bottom: 1px solid;">Юридическая информация</a></li>
+                    <li><a href="https://help-mc.ru/oplata/" target="_blank" style="border-bottom: 1px solid;">Онлайн
+                            оплата</a>
+                    </li>
+                    <li><a href="impaired.html" style="border-bottom: 1px solid;">Версия для слабовидящих</a></li>
+                    <li><a href="https://cdn.mchelp.ru/i/legal/pdn.pdf" target="_blank"
+                            style="border-bottom: 1px solid;">Политика
+                            обработки ПДн (№152-ФЗ)</a></li>
+                </ul>
+                <br>
+                <a href="https://metrika.yandex.ru/stat/?id=90227718&amp;from=informer" target="_blank"
+                    rel="nofollow"><img
+                        src="https://informer.yandex.ru/informer/90227718/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                        style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+                        title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+                        class="ym-advanced-informer" data-cid="90227718" data-lang="ru" /></a>
+                <script
+                    type="text/javascript">(function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return } } k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym'); ym(90227718, 'init', { webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });</script>
+                <noscript>
+                    <div><img src="https://mc.yandex.ru/watch/90227718" style="position:absolute; left:-9999px;" />
+                    </div>
+                </noscript>
+                <a href="https://cntc.me/mchelp" target="_blank"><img src="https://cdn.mchelp.ru/i/i/ya-goodplace2.jpg"
+                        style="width: 148px;"></a>
+                <hr style="width:0px;">
+            </nav>
+
+            <nav class=foot id=navtalk>
+
+                <ul style="margin-left: 25px;">
+                    <li><span>Наши контакты</span></li>
+                    <li data-href=#addr style="margin-bottom:0px;"><a href=#addr>#</a>
+                        <ul>
+                            <li data-href=#map><a href=#map>м. Пролетарская <br>м. Крестьянская застава</a></li>
+                        </ul>
+                    </li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href=#addr style="margin-bottom:0px;"><a href=#addr>#</a>
+                        <ul>
+                            <li data-href=#map><a href=#map>ул. Воронцовская,&nbsp;35Б к1</a></li>
+                        </ul>
+                    </li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href=#clock style="margin-bottom:0px;"><span>Пн-Пт 09:00 - 23:00<br>Сб, Вс 09:00 -
+                            21:00</span></li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href="tel:8(495)648-62-44" style="margin-bottom:0px;"><a class="_tel0 calltracking"
+                            href="tel:8(495)648-62-44">8(495)648-62-44</a></li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href="mailto:callcenter@mchelp.ru" style="margin-bottom:0px;"><a
+                            href="mailto:callcenter@mchelp.ru">callcenter@mchelp.ru</a></li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href="https://vk.com/id889963946" style="margin-bottom:0px;"><a
+                            href="https://vk.com/id889963946" target="_blank">Мы ВКонтакте</a></li>
+                    <li style="padding:0px!important;margin:0px!important;">───────────────────</li>
+                    <li data-href="hotline.html#mailto" style="margin-bottom:0px;"><a href="hotline.html">Окно обратной
+                            связи</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="foot hidden-xs" id=navfoot>
+                <ul>
+                    <li><span>ИНФОРМАЦИЯ</span></li>
+                    <li><a href="legal.html">Лицензия</a></li>
+                    <li><a href="hotline.html">Окно обратной связи</a></li>
+                    <li><a href="videoreviews.html">Видео отзывы пациентов</a></li>
+                    <li><a href="chief.html">Новости клиники</a></li>
+                    <li><a href="team.html">Наши врачи</a></li>
+                    <li><a href="price.html">Прейскурант</a></li>
+                    <li><a href="sale.html">Спец.предложения</a></li>
+                    <li><a href="https://vk.com/id889963946" target="_blank">Мы в контакте</a></li>
+                    <li><a href="online.html">Запись на прием</a></li>
+                </ul>
+            </nav>
+
+            <nav class="foot hidden-xs" id=navinfo>
+                <ul>
+                    <li><span>ОТДЕЛЕНИЯ КЛИНИКИ</span>
+                    <li><a href="div-terapy.html">Отделение терапии</a></li>
+                    <li><a href="div-urol.html">Отделение урологии</a></li>
+                    <li><a href="div-procto.html">Отделение проктологии</a></li>
+                    <li><a href="div-onko.html">Отделение онкологии</a></li>
+                    <li><a href="div-ortoped.html">Отделение ортопедии</a></li>
+                    <li><a href="div-diagnos.html">Отделение диагностики</a></li>
+                    <li><a href="div-mammol.html">Отделение маммологии</a></li>
+                    <li><a href="div-cardio.html">Отделение кардиологии</a></li>
+                    <li><a href="div-pulmo.html">Отделение пульмонологии</a></li>
+                    <li><a href="lechenie-pecheni.html">Лечение и диагностика печени</a></li>
+                    <li><a href="ochishenie-pecheni.html">Очищение печени</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </footer>
+
+    <nav id="navlaw" class="navlaw_element_01">
+
+        <p>ООО «МЦ»</p>
+        <p>Все материалы данного сайта являются объектами авторского права ОО "МЦ". Запрещается копирование,
+            распространение
+            или любое иное использование информации и объектов без предварительного письменного согласия
+            правообладателя.
+            Указание ссылки на источник информации является обязательным.</p>
+        <p>Лицензия Л041-01137-77/00359642</p>
+        <p>Материалы, размещенные на сайте, носят информационный характер и предназначены для образовательных целей.
+            Посетители сайта не должны использовать их в качестве медицинских рекомендаций. Определение диагноза и выбор
+            методики лечения остается исключительной прерогативой вашего лечащего врача. ООО "МЦ" не несёт
+            ответственности за
+            возможные негативные последствия, возникшие в результате использования информации, размещенной на сайте
+            terapevt.moscow</p>
+        <p>Администрация клиники принимает все меры по своевременному обновлению размещенного на сайте прайс-листа,
+            однако
+            во избежание возможных недоразумений, советуем уточнять стоимость услуг в регистратуре клиники или в
+            колл-центре
+            по телефону 8(495)648-62-44. Размещенный прайс не является офертой. Медицинские услуги оказываются на
+            основании
+            договора с пациентом.</p>
+        <hr>
+        <span class="adgovdesc">Возможны&nbsp;противопоказания. Требуется консультация специалиста. 18+</span>
+        <hr>
+        <p>Источник изображений «Фотобанк Лори».</p>
+
+        <div class="container">
+        </div>
+
+    </nav>
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+<script src="/src/map.js"></script>
   </body>
 </html>

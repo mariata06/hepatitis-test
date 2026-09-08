@@ -1,0 +1,445 @@
+/* =========================
+   HEADER
+   ========================= */
+
+.head {
+    color: #686868;
+    line-height: 1.25em;
+}
+
+.head .container {
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+}
+
+.head ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.head ul::before,
+.head ul::after {
+    display: none;
+}
+
+.head a,
+.head span {
+    white-space: nowrap;
+}
+
+.head a {
+    color: inherit;
+}
+
+.head a:not(:focus):not(:hover) {
+    text-decoration: none;
+}
+
+.head > * > li::before,
+.head > * > li > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.head > * > li > * {
+    padding: 1.3333em 0 1.6666em;
+}
+
+.head .logo {
+    filter: invert(1);
+}
+
+
+/* Верхняя бирюзовая полоса */
+
+.navtop {
+    background: #00a7bc;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navtop img {
+    filter: invert(1);
+    height: 3.875em;
+    margin: -1.125em 0;
+    object-fit: contain;
+    object-position: left;
+    vertical-align: middle;
+    width: 21em;
+}
+
+.navtop li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navtop li:not(:last-child) {
+    margin-right: 1em;
+}
+
+
+/* Иконки верхнего меню */
+
+.navtop [data-href]::before {
+    left: 50%;
+    height: 1.25em;
+    margin: -.75em 0 0 -.625em;
+    position: absolute;
+    top: 50%;
+    transition: margin .4s;
+    width: 1.25em;
+}
+
+#headmain .navtop [data-href]::before {
+    filter: invert(1);
+}
+
+
+/* Телефон */
+
+.navtop [data-href^=tel] {
+    margin-left: auto;
+}
+
+.navtop [data-href^=tel]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><path d="M118.27 98.503v-.026s-22.666-22.64-22.68-22.65a4.54 4.54 0 0 0-6.44.01L78.72 86.315c-4.056 4.057-9.286.457-19.325-7.73-6.642-5.415-14.284-12.698-20.91-20.91-4.65-5.76-8.762-11.81-4.514-16.057.01-.01 10.48-10.45 10.48-10.46l.01-.022c1.88-1.878 1.698-4.755-.02-6.472v-.026L21.1 1.33c-1.797-1.796-4.67-1.756-6.44.013L4.15 11.853C-.18 17.273-9.803 43.1 31.452 85.387c43.46 44.55 71.505 35.02 76.333 29.994 0 0 10.5-10.37 10.5-10.38l.008-.02c1.88-1.88 1.69-4.76-.02-6.48z"/></svg>');
+    content: "";
+}
+
+
+/* Кнопка "Ещё" */
+
+.navtop [data-href*=aside] {
+    background: rgba(0, 0, 0, .1);
+    margin: 0 -15px 0 -.25rem;
+    width: 4rem;
+}
+
+.navtop [data-href*=aside] a,
+.navtop [data-href*=price2] a,
+.navtop [data-href^=tel] a {
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navtop [data-href*=aside] {
+    color: transparent;
+    position: relative;
+}
+
+#headmain .navtop [data-href*=aside]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M4 10h24a2 2 0 000-4H4a2 2 0 000 4zm24 4H4a2 2 0 000 4h24a2 2 0 000-4zm0 8H4a2 2 0 000 4h24a2 2 0 000-4z"/></svg>');
+    content: "";
+    height: 1.5em;
+    margin: -.9167em 0 0 -.75em;
+    width: 1.5em;
+}
+
+
+/* Основная шапка */
+
+#headmain {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#headmain .navaddr {
+    background: #fff;
+}
+
+
+/* Адресная строка */
+
+.navaddr .container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 4em;
+}
+
+.navaddr > * > li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navaddr > * > li:not(:last-child) {
+    margin-right: 1em;
+}
+
+.navaddr > * > li > * {
+    padding: .0625em 0 .125em;
+}
+
+.navaddr [href*=addr] {
+    display: none;
+}
+
+.navaddr [href*=appoint] {
+    background: #016a77;
+    color: #fff;
+    font-weight: 700;
+    padding: .6667em 1rem .75em !important;
+    border-radius: 6px;
+}
+
+.navaddr [href*=appoint]:hover {
+    background: #f77716;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+
+/* Третья строка */
+
+@media (min-width: 768px) {
+.navmore {
+    background: #00a7bc;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navmore .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navmore ul::before,
+.navmore ul::after,
+.navmore > * > li {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.navmore ul::before {
+    content: "";
+    width: 12.5em;
+}
+
+.navmore ul::after {
+    content: "";
+    margin: 0;
+    width: 2em;
+}
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+    .head {
+        font-size: .8125rem;
+    }
+
+    .head > * > li > * {
+        padding: 1.75em 0 2.125em;
+    }
+
+    #headmain > * {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navtop li {
+        margin: 0 !important;
+        position: absolute !important;
+        z-index: 1;
+    }
+
+    .navtop li:first-child {
+        left: 15px;
+    }
+
+    .navtop li:not(:first-child):not([data-href*=price2]) {
+        display: none;
+    }
+
+    .navtop [data-href*=price2] {
+        right: 15px;
+    }
+}
+
+
+/* Большие экраны */
+
+@media (min-width: 1200px) {
+    body, .headoffset {
+        padding-top: 127px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .headoffset {
+        margin-top: -127px;
+    }
+}
+
+/* @media (min-width: 1200px) {
+
+    .head {
+        font-size: .9375rem;
+    }
+
+    .headoffset {
+        margin-top: -127px;
+    }
+} */
+
+
+/* Планшет / мобильный */
+@media (min-width: 768px) {
+    .navaddr>*>li>*, .fx .navaddr>*>li>* {
+        padding: .0625em 0 .125em;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #headmain .navaddr,
+    #headmain .navmore {
+        display: none;
+    }
+
+    .navtop .container {
+        display: flex;
+    }
+
+    .head .logo {
+        padding: 0;
+    }
+}
+
+
+/* Маленькие телефоны */
+
+@media (max-width: 575px) {
+
+    #headmain .navtop img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 320px) {
+
+    #headmain .navtop img {
+        object-fit: cover;
+        height: 3.3em;
+    }
+}
+
+/* Выпадающее меню верхней навигации */
+
+.navmoreme ul {
+    list-style: none;
+}
+
+.navmoreme li {
+    display: block;
+    float: left;
+    position: relative;
+    padding: 0 !important;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.navmoreme li a {
+    color: #fff;
+}
+
+.navmoreme li:hover,
+.navmoreme li:focus-within {
+    background: #016a77;
+    cursor: pointer;
+}
+
+/* Скрываем вложенные меню */
+.navmoreme ul li ul {
+    background: #016a77;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 6rem;
+    position: absolute;
+    left: 0;
+    display: none;
+    padding: 1rem;
+    z-index: 1000;
+    transition: all .5s ease;
+}
+
+/* Показываем при наведении */
+.navmoreme ul li:hover > ul,
+.navmoreme ul li:focus-within > ul,
+.navmoreme ul li ul:hover,
+.navmoreme ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/* Пункты внутри выпадающего меню */
+.navmoreme ul li ul li {
+    clear: both;
+    padding: 2px 0 7px 0 !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navmoreme ul li ul li a {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.navmoreme > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navmoreme > ul > li {
+    position: relative;
+}
+
+.navmoreme > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.navmoreme > ul > li:hover > ul {
+    display: block;
+}
+
+/* Служебные классы показа/скрытия меню */
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}

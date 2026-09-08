@@ -1,0 +1,861 @@
+/* Обёртка основного контента */
+
+.shadow {
+    background: aliceblue;
+}
+
+.clearfix::after, .container::after, .container::before, .row::after {
+    clear: both;
+    content: ' ';
+    display: table;
+}
+
+@media (min-width: 768px) {
+    .shadow {
+        box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, .1);
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* Основная белая область статьи */
+
+.maincontent {
+    /* background: #fff; */
+    background: transparent;
+}
+.maincontent .heading21 {
+    padding: 10px 0 10px 0;
+    color: indigo;
+}
+
+.gepatit-deck {
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    /* background: #fff; */
+}
+
+.gepatit-slide {
+    position: relative;
+    padding: 68px 64px;
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(255, 255, 255, .95),
+    rgba(255, 255, 255, .76)
+    ),
+    radial-gradient(
+    circle at 88% 18%,
+    rgba(36, 159, 178, .11),
+    transparent 34%
+    ),
+    #f7fbfd;
+
+    margin-top: 50px;
+}
+
+.gepatit-slide h1, h2 {
+    color: #016a77;
+}
+
+.gepatit-center {
+    text-align: center;
+}
+
+.gepatit-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    max-height: 540px;
+}
+
+.gepatit-hero-copy {
+    padding: 72px 60px;
+    z-index: 1;
+}
+
+.gepatit-hero img,
+.gepatit-two-col>img,
+.gepatit-therapy>img,
+.gepatit-cta>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gepatit-b-raspoznavanie-i-lechenie img {
+    border-radius: 6px;
+}
+
+.gepatit-hero img {
+    object-position: right center;
+}
+
+.gepatit-glass-card,
+.gepatit-warning,
+.gepatit-photo-frame,
+.gepatit-panel,
+.gepatit-steps-grid article,
+.gepatit-stack-list article,
+.gepatit-therapy-card,
+.gepatit-doctor-grid article,
+.gepatit-transmission-grid article,
+.gepatit-step-card,
+.gepatit-cta-card {
+    background: rgba(255, 255, 255, .94);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.gepatit-glass-card {
+    padding: 38px 44px;
+    /* font-size: 34px; */
+    line-height: 1.34;
+    border: 4px solid #fff;
+}
+
+/* .gepatit-glass-card b {
+    color: #016a77;
+} */
+
+.gepatit-warning {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 35px;
+    padding: 24px 34px;
+    color: #016a77;
+    font-weight: 700;
+    border: 3px solid #00bcd1;
+    background: #effdff;
+}
+
+.gepatit-warning span {
+    width: 71px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #00bcd1;
+    border-radius: 50%;
+    font-size: 26px;
+    color: #fff;
+}
+
+.gepatit-two-col {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    gap: 48px;
+    align-items: center;
+}
+
+.gepatit-photo-frame {
+    padding: 28px;
+}
+
+.gepatit-photo-frame img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+}
+
+.gepatit-content p {
+    max-width: 780px;
+}
+
+.gepatit-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 44px 0 0;
+    display: grid;
+    gap: 26px;
+}
+
+.gepatit-check-list li {
+    position: relative;
+    padding: 26px 30px 26px 92px;
+    /* font-size: 28px; */
+    line-height: 1.22;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: var(--soft-shadow);
+}
+
+.gepatit-check-list li::before {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 17px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #effdff;
+}
+
+.gepatit-check-list li::after {
+    content: "";
+    position: absolute;
+    left: 41px;
+    top: 28px;
+    width: 18px;
+    height: 10px;
+    border-left: 4px solid #00a7bc;
+    border-bottom: 4px solid #00a7bc;
+    transform: rotate(-45deg);
+}
+
+.gepatit-check-list .gepatit-danger::before {
+    background: #fff2cf;
+}
+
+.gepatit-check-list .gepatit-danger::after {
+    border-color: #9f7500;
+}
+
+.gepatit-transmission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+}
+
+.gepatit-transmission-grid article {
+    min-height: 210px;
+    padding: 20px;
+    /* background:
+        linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .72)),
+        linear-gradient(135deg, #dff4f8, #fff); */
+}
+
+.gepatit-transmission-1 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-1.jpg) !important;
+    background-position: center center !important;
+}
+.gepatit-transmission-2 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-2.jpg) !important;
+    background-position: center center !important;
+}
+.gepatit-transmission-3 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-3.jpg) !important;
+    background-position: center center !important;
+}
+.gepatit-transmission-4 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-4.jpg) !important;
+    background-position: center center !important;
+}
+.gepatit-transmission-5 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-5.jpg) !important;
+    background-position: center center !important;
+}
+.gepatit-transmission-6 {
+    background-image: url(https://cdn.mchelp.ru/assets/articles/puti-peredachi-infekcii-6.jpg) !important;
+    background-position: center center !important;
+}
+
+.gepatit-transmission-grid span {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    color: #137d9f;
+    background: var(--pale);
+    font-weight: 800;
+}
+
+/* .gepatit-transmission-grid p { font-size: 24px; margin-bottom: 0; } */
+
+.gepatit-timeline-slide {
+    background:
+        linear-gradient(90deg, #fff 0 50%, transparent 100%),
+        url("https://cdn.mchelp.ru/assets/articles/gepatit-b-cells.jpg") right center / 58% auto no-repeat;
+    min-height: 480px;
+}
+
+.gepatit-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr 1fr 1fr;
+    gap: 34px;
+    align-items: end;
+    /* min-height: 480px; */
+}
+
+.gepatit-timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -42px;
+    height: 15px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #bac8cf 0 12%, #f2c04a 82% 100%);
+    box-shadow: inset 0 0 0 3px rgba(8, 39, 63, .12);
+}
+
+.gepatit-timeline article {
+    position: relative;
+    min-height: 164px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
+.gepatit-timeline article::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -43px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 6px solid #fff;
+    transform: translateX(-50%);
+    box-shadow: var(--soft-shadow);
+}
+
+.gepatit-timeline article:first-child::after {
+    background: #aebdc4;
+}
+
+.gepatit-timeline article:nth-child(2):after {
+    background: #c2b987;
+}
+
+/* .gepatit-timeline p { font-size: 24px; margin-bottom: 0; } */
+
+.gepatit-symptoms {
+    min-height: 760px;
+}
+
+.gepatit-symptoms img {
+    position: absolute;
+    left: 50%;
+    top: 205px;
+    width: 420px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 26px;
+    transform: translateX(-50%);
+}
+
+.gepatit-symptoms::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    width: 720px;
+    height: 580px;
+    border: 5px dotted #b8d3dd;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.gepatit-note {
+    position: absolute;
+    width: 290px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    /* font-size: 25px; */
+    line-height: 1.22;
+}
+
+.gepatit-note::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #00a7bc;
+    box-shadow: 0 0 18px rgb(0 167 188 / 48%);
+}
+
+
+
+
+.gepatit-n1 {
+    left: 47px;
+    top: 180px;
+    width: 221px;
+}
+
+.gepatit-n1::after {
+    right: -16px;
+    bottom: -10px;
+}
+
+.gepatit-n2 {
+    left: 37px;
+    top: 392px;
+    width: 230px;
+}
+
+.gepatit-n2::after {
+    right: -16px;
+    bottom: 40px;
+}
+
+.gepatit-n3 {
+    left: 95px;
+    bottom: 60px;
+    width: 250px;
+}
+
+.gepatit-n3::after {
+    right: -16px;
+    top: -10px;
+}
+
+.gepatit-n4 {
+    right: 70px;
+    top: 184px;
+    width: 250px;
+}
+
+.gepatit-n4::after {
+    left: -13px;
+    bottom: -12px;
+}
+
+.gepatit-n5 {
+    right: 30px;
+    top: 410px;
+    width: 240px;
+}
+
+.gepatit-n5::after {
+    left: -18px;
+    bottom: 22px;
+}
+
+.gepatit-n6 {
+    right: 82px;
+    bottom: 88px;
+    width: 240px;
+}
+
+.gepatit-n6::after {
+    left: -16px;
+    top: -10px;
+}
+
+
+.gepatit-bleed-photo {
+    border-radius: 0;
+    min-height: 720px;
+}
+
+.gepatit-jaundice .gepatit-content,
+.gepatit-diagnostics .gepatit-content {
+    padding-right: 28px;
+}
+
+.gepatit-stack-list {
+    display: grid;
+    gap: 22px;
+}
+
+.gepatit-stack-list article {
+    position: relative;
+    padding: 24px 28px 24px 65px;
+    border-radius: 18px;
+}
+
+.gepatit-stack-list article::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 22px;
+    width: 15px;
+    height: calc(100% - 44px);
+    border-radius: 999px;
+    background: #e8f6fb;
+}
+
+.gepatit-stack-list b,
+.gepatit-stack-list span {
+    display: block;
+    line-height: 1.2;
+}
+
+.gepatit-stack-list span {
+    color: #222;
+    margin-top: 4px;
+}
+
+.gepatit-compare-grid,
+.gepatit-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 46px;
+}
+
+.gepatit-panel {
+    overflow: hidden;
+    padding: 0;
+    border: 3px solid #8db5c3;
+}
+
+.gepatit-panel h3 {
+    padding: 44px;
+    text-align: center;
+    border-bottom: 1px solid #d6e2e7;
+}
+
+.gepatit-panel p {
+    padding: 28px 44px;
+    margin: 0;
+    border-bottom: 1px solid #d6e2e7;
+}
+
+.gepatit-panel p::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 24px;
+    border-radius: 50%;
+    background: #77b2c9;
+}
+
+.gepatit-panel.gepatit-gold {
+    border-color: #d99b1d;
+    box-shadow: 0 0 30px rgba(226, 161, 28, .25);
+}
+
+.gepatit-panel.gepatit-gold p::before {
+    background: var(--gold);
+}
+
+.gepatit-panel strong {
+    display: block;
+    padding: 28px 44px;
+    background: var(--gold);
+    text-transform: uppercase;
+}
+
+.gepatit-fork-map {
+    position: relative;
+    min-height: 480px;
+}
+
+.gepatit-start {
+    position: absolute;
+    left: 90px;
+    top: 200px;
+    padding: 30px 64px;
+    color: #fff;
+    /* font-size: 34px; */
+    background: #174d84;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+}
+
+.gepatit-branch {
+    position: absolute;
+    left: 335px;
+    width: 310px;
+    height: 96px;
+    border-left: 22px solid;
+    border-top: 22px solid;
+    border-radius: 80px 0 0 0;
+}
+
+.gepatit-branch.gepatit-good {
+    top: 170px;
+    border-color: var(--green);
+    transform: skewX(-16deg);
+}
+
+.gepatit-branch.gepatit-bad {
+    top: 295px;
+    border-color: #c18a00;
+    transform: scaleY(-1) skewX(-16deg);
+}
+
+.gepatit-outcome {
+    position: absolute;
+    right: 36px;
+    width: 560px;
+    min-height: 150px;
+    padding: 34px 42px;
+    background: #fff;
+    border: 5px solid;
+    border-radius: 20px;
+    box-shadow: var(--soft-shadow);
+}
+
+.gepatit-good-card {
+    top: 70px;
+    border-color: var(--green);
+}
+
+.gepatit-bad-card {
+    top: 315px;
+    border-color: #9a7100;
+}
+
+.gepatit-outcome h3 {
+    color: inherit;
+}
+
+.gepatit-good-card h3 {
+    color: #159b52;
+}
+
+.gepatit-bad-card h3 {
+    color: #9a7100;
+}
+
+.gepatit-caption {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 18px 42px;
+    background: #edf1f4;
+    border-radius: 999px;
+    box-shadow: var(--soft-shadow);
+}
+
+.gepatit-complications {
+    background:
+        linear-gradient(rgba(8, 20, 32, .76), rgba(8, 20, 32, .76)),
+        url("https://cdn.mchelp.ru/assets/articles/gepatit-b-mri-bg.jpg") center / cover no-repeat;
+}
+
+.gepatit-complications h2 {
+    padding: 22px 38px;
+    text-align: center;
+    background: #fff;
+    border-radius: 18px;
+}
+
+.gepatit-comp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 70px;
+}
+
+.gepatit-comp-grid article {
+    min-height: 150px;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    text-align: center;
+    /* font-size: 28px; */
+    font-weight: 800;
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 18px;
+    background: rgb(240 248 255);
+    backdrop-filter: blur(4px);
+}
+
+.gepatit-steps-grid article {
+    min-height: 230px;
+    padding: 44px;
+}
+
+.gepatit-steps-grid span {
+    display: block;
+    color: #00a7bc;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.gepatit-steps-grid p {
+    margin-bottom: 0;
+}
+
+.gepatit-blue-icons article::before {
+    background: var(--pale);
+    border-radius: 12px;
+}
+
+.gepatit-therapy {
+    padding: 0 0 20px 0;
+    background: #f0f8ff;
+}
+
+.gepatit-therapy>img {
+    height: 330px;
+}
+
+.gepatit-therapy-card {
+    width: calc(100% - 120px);
+    margin: -70px auto 0;
+    padding: 56px;
+    text-align: center;
+    position: relative;
+}
+
+.gepatit-therapy-card h2 {
+    color: #0a5270;
+}
+
+.gepatit-therapy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 44px;
+    text-align: left;
+}
+
+.gepatit-therapy-grid article {
+    padding: 30px;
+    border-radius: 18px;
+    background: #e8f4fb;
+    box-shadow: var(--soft-shadow);
+}
+
+.gepatit-specialists p {
+    max-width: 780px;
+}
+
+.gepatit-doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 50px;
+}
+
+.gepatit-doctor-grid article {
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.gepatit-doctor-grid img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    display: block;
+}
+
+.gepatit-doctor-grid h3 {
+    color: #0a5270;
+    padding: 28px 24px 0;
+}
+
+.gepatit-doctor-grid p {
+    padding: 0 24px 30px;
+    margin-bottom: 0;
+}
+
+.gepatit-liver-steps {
+    text-align: center;
+    min-height: 760px;
+}
+
+.gepatit-liver-steps img {
+    position: absolute;
+    left: 50%;
+    top: 255px;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 35px rgba(20, 159, 178, .28));
+}
+
+.gepatit-liver-steps::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    width: 720px;
+    height: 480px;
+    border: 2px solid #c7dde7;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.gepatit-step-card {
+    position: absolute;
+    width: 370px;
+    padding: 28px 30px;
+    text-align: left;
+}
+
+.gepatit-step-card span {
+    float: left;
+    margin-right: 18px;
+    color: #00a7bc;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: .9;
+}
+
+.gepatit-step-card div {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.gepatit-step-card p {
+    clear: both;
+    margin-bottom: 0;
+}
+
+.gepatit-left {
+    left: 40px;
+    top: 300px;
+}
+
+.gepatit-right {
+    right: 40px;
+    top: 300px;
+}
+
+.gepatit-bottom {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 440px;
+}
+
+.gepatit-cta {
+    padding: 0 0 20px 0;
+    background: #f0f8ff;
+    margin-bottom: 50px;
+}
+
+.gepatit-cta>img {
+    height: 390px;
+}
+
+.gepatit-cta-card {
+    width: calc(100% - 120px);
+    margin: -74px auto 0;
+    padding: 56px;
+    text-align: center;
+    position: relative;
+}
+
+.gepatit-cta-card h2 {
+    color: var(--blue);
+}
+
+.gepatit-cta-card a {
+    margin: 28px 0 24px;
+    text-decoration: none;
+}
+
+.gepatit-slide {
+    max-height: none;
+}
+
+.gepatit-cta-card small {
+    display: block;
+    color: #77848b;
+    font-size: 18px;
+}
