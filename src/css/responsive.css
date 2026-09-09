@@ -483,7 +483,7 @@ object-position: 89% 40%;
     .gepatit-timeline-slide .gepatit-content {
         right: 13%;
         width: 32%;
-        top: 15%;
+        top: 35%;
     }
 
         .gepatit-hero-copy {
@@ -533,6 +533,11 @@ object-position: 89% 40%;
             display: flex;
             flex-direction: column;
         }
+
+       .gepatit-hero .gepatit-hero-copy  {
+        padding-left: 16px;
+        padding-right: 16px;
+       }
 }
 
 @media (max-width: 550px) {
@@ -546,6 +551,11 @@ object-position: 89% 40%;
 
 
 @media (max-width: 450px) {
+
+    .banner.mncntnt .row { 
+        padding-top: 0;
+    }
+
     .gepatit-content {
         font-size: 16px;
         line-height: 16px;
@@ -563,13 +573,22 @@ object-position: 89% 40%;
     .gepatit-timeline-slide .gepatit-content {
         right: 8%;
         right: unset;
+        width: 100%;
     }
 
     .gepatit-cta-2 img {
-        height: 450px;
+        height: 300px;
         object-fit: cover;
-        object-position: -490px -40px;
+        object-position: -321px 0px;
     }
+
+        .gepatit-diagnostics .gepatit-content {
+            width: 100%;
+        }
+
+        .gepatit-liver-steps .gepatit-stack-list {
+        width: 90%;
+        }
 }
 
 @media (max-width: 390px) {
