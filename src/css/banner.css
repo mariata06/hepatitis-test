@@ -116,6 +116,13 @@
     }
 }
 
+@media (max-width: 500px) {
+    .banner p, .mncntnt p {
+        font-size: 22px;
+    }
+}
+
+
 @media (max-width: 400px) {
     .banner p, .mncntnt p {
         font-size: 22px;
