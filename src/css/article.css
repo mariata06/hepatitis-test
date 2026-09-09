@@ -146,7 +146,7 @@
     padding: 24px 34px;
     color: #016a77;
     font-weight: 700;
-    border: 3px solid #00bcd1;
+    border: 1px solid #00bcd1;
     background: #effdff;
 }
 
@@ -156,9 +156,34 @@
     display: grid;
     place-items: center;
     background: #00bcd1;
+    background: rgba(0, 167, 188, 0.7);
     border-radius: 50%;
     font-size: 26px;
     color: #fff;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+@media (max-width: 1170px) {
+    .gepatit-warning span {
+        min-width: 40px;
+        min-height: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .gepatit-warning {
+        padding: 24px;
+    }
+
+    .gepatit-timeline-slide .gepatit-content {
+        right: 15%;
+    }
+
+    .maincontent .heading2 {
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
 }
 
 .gepatit-two-col {
@@ -875,4 +900,225 @@
     display: block;
     color: #77848b;
     font-size: 18px;
+}
+
+.gepatit-content {
+    position: absolute;
+    width: 30%;
+    right: 10%;
+    top: 30%;
+}
+
+.gepatit-photo-frame {
+ margin: 0;
+}
+
+.gepatit-two-col {
+    display: block;
+}
+
+.gepatit-cta-2 {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    /* padding: 72px 60px; */
+}
+
+.gepatit-cta-2 img {
+    width: 1170px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.gepatit-cta-2 .gepatit-hero-copy {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top: 10%; */
+    /* left: 10%; */
+    /* padding: 72px 60px; */
+    width: 40%;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.42857143;
+}
+
+.gepatit-timeline-slide {
+    background: none;
+    /* background: radient(90deg, #fff 0 50%, transparent 100%), url(https://cdn.mchelp.ru/assets/articles/gepatit-b-cells.jpg) right center / 58% auto no-repeat; */
+    min-height: 480px;
+}
+
+.gepatit-hero-2 {
+    min-height: 545px;
+}
+
+.gepatit-hero-2 {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.gepatit-diagnostics {
+    padding: 24px;
+    padding: 0;
+}
+
+.gepatit-diagnostics .gepatit-content {
+    left: 2%;
+    top: 3%;
+    width: 40%;
+    /* position: relative; */
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.gepatit-diagnostics .gepatit-blue-icons article::before {
+    display: none;
+}
+
+.gepatit-diagnostics .gepatit-stack-list {
+    gap: 10px;
+
+}
+
+.gepatit-diagnostics .gepatit-stack-list article {
+    background: rgba(255, 255, 255, .7);
+    padding: 16px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.gepatit-diagnostics .gepatit-stack-list article::before {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 17px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #effdff;
+}
+
+.gepatit-diagnostics .gepatit-stack-list article::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 28px;
+    width: 18px;
+    height: 10px;
+    border-left: 2px solid #00a7bc;
+    border-bottom: 2px solid #00a7bc;
+    transform: rotate(-45deg);
+}
+
+.gepatit-therapy>img {
+    height: 550px;
+}
+
+.gepatit-step-card.gepatit-left,
+.gepatit-step-card.gepatit-right,
+.gepatit-step-card.gepatit-bottom {
+    background: rgba(255, 255, 255, .7);
+    padding: 16px;
+    padding-left: 50px;
+    position: relative;
+    left: unset;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    transform: unset;
+}
+
+.gepatit-liver-steps img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* left: unset; */
+    /* left: 0; */
+    top: unset;
+}
+
+.gepatit-liver-steps::before {
+    display: none;
+}
+
+.gepatit-liver-steps .gepatit-stack-list {
+    display: grid;
+    gap: 10px;
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.gepatit-liver-steps .gepatit-stack-list {
+    left: 7%;
+    top: 50%;
+    transform: translateY(-41%);
+}
+
+.gepatit-liver-steps .gepatit-stack-list article::before {
+    display: none;
+}
+
+.gepatit-cta>img {
+    height: 550px;
+}
+
+.gepatit-liver-steps .gepatit-stack-list article::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 28px;
+    width: 18px;
+    height: 10px;
+    border-left: 2px solid #00a7bc;
+    border-bottom: 2px solid #00a7bc;
+    transform: rotate(-45deg);
+}
+
+.banner-description .container {
+    padding: 0;
+    width: 100%;
+}
+
+@media (max-width: 1170px) {
+    .gepatit-cta-2 {
+    width: 100%;
+    height: auto;
+}
+.gepatit-cta-2 img {
+    width: 100%;
+    height: auto;
+}
+}
+
+@media (max-width: 1024px) {
+    .gepatit-hero-copy {
+    padding: 24px;
+}
+.gepatit-timeline-slide .gepatit-content {
+    right: 15%;
+
+}
+}
+
+.gepatit-liver-steps .gepatit-stack-list {
+    left: 7%;
+    top: 45%;
+    transform: translateY(-41%);
+}
+
+@media (max-width: 1024px) {
+    .gepatit-liver-steps {
+        padding: 24px;
+    }
+    .gepatit-liver-steps .gepatit-stack-list {
+        left: 5%;
+        top: 39%;
+    }
 }

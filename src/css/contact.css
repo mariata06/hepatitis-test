@@ -2,6 +2,7 @@
 
 #addrs {
     background: #fdfcf5;
+    background-color: #f0ffeb;
 }
 
 #addrs .heading {
@@ -10,13 +11,16 @@
 
 .kontakty {
     background: #fff;
-    border: 2px solid #016a77;
+    /* border: 1px solid #016a77; */
     color: #000;
     display: block;
     line-height: 1.75rem;
     margin-bottom: 2.5rem;
     padding: 1.25rem;
     position: relative;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
 }
 
 .kontakty h2 {
@@ -30,6 +34,24 @@
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.contacts .col-lg-6 .kontakty .row {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 3fr; */
+}
+
+.contacts .container .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.contacts .container .row .col-lg-6{
+    width: 100%;
 }
 
 .kontakty ul {
@@ -73,3 +95,4 @@
         width: 75%;
     }
 }
+

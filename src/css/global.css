@@ -67,6 +67,7 @@ h2,
 h3,
 p {
     margin-top: 0;
+    line-height: 25px;
 }
 
 h2.heading, h1.heading {

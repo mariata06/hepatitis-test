@@ -186,6 +186,7 @@
 
 .navaddr [href*=appoint] {
     background: #016a77;
+    background: rgba(1, 106, 119, 0.7);
     color: #fff;
     font-weight: 700;
     padding: .6667em 1rem .75em !important;
@@ -203,7 +204,8 @@
 
 @media (min-width: 768px) {
 .navmore {
-    background: #00a7bc;
+    /* background: #00a7bc; */
+    background: rgba(0, 167, 188, 0.7);
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;

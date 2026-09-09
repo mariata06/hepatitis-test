@@ -233,7 +233,8 @@ body {
 
 @media (min-width: 768px) {
     body {
-        padding-top: 148px;
+        /* padding-top: 148px; */
+        padding-top: 120px;
     }
 
     .gepatit-comp-grid {
@@ -250,7 +251,7 @@ body {
     .gepatit-therapy-card {
         width: calc(100% - 120px);
         margin: -70px auto 0;
-        padding: 20px;
+        padding: 16px;
         text-align: center;
         position: relative;
     }
@@ -272,6 +273,48 @@ body {
     #appoint > * {
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .gepatit-liver-steps .gepatit-stack-list {
+        top: 43%;
+    }
+
+    .gepatit-liver-steps {
+    min-height: 600px;
+}
+
+.foot {
+    padding: 0 10px;
+}
+
+.foote > ul {
+    margin-left: 10px;
+}
+
+.jurid-text {
+    width: 70%;
+}
+}
+
+@media (max-width: 767px) {
+    .banner.mncntnt .row {
+        padding-top: 60px;
+    }
+
+    .navtop [data-href^=tel]::before {
+    left: 72%;
+    }
+
+    #headmain .navtop [data-href*=aside]::before {
+        left: 40%;
+    }
+
+    .banner p, .mncntnt p {
+    text-align: justify;
+    font-size: 16px;
+}
+    .gepatit-slide.shadow {
+        margin-top: 20px;
     }
 }
 
@@ -313,5 +356,330 @@ body {
     h2.heading {
         font-size: 18px;
         line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gepatit-step-card.gepatit-left, .gepatit-step-card.gepatit-right, .gepatit-step-card.gepatit-bottom {
+    background: rgba(255, 255, 255, .2);
+    padding: 10px;
+    padding-left: 45px;
+    position: relative;
+    left: unset;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    transform: unset;
+    line-height: 10px;
+}
+
+    .navmore ul::after {
+        content: "";
+        margin: 0;
+        width: 0;
+    }
+
+.navmore ul::before, .navmore ul::after, .navmore > * > li {
+    margin-right: 5px;
+}
+
+
+.navtop img {
+    width: 200px;
+}
+
+.about .trigger {
+    width: 100%;
+}
+
+.gepatit-diagnostics .gepatit-content {
+    left: 4%;
+    top: 4%;
+    width: 50%;
+}
+
+.gepatit-warning span {
+    min-width: 30px;
+    min-height: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+}
+
+.gepatit-warning {
+    padding: 16px;
+    gap: 15px;
+}
+
+.gepatit-slide {
+    padding: 24px;
+}
+
+.gepatit-hero-2 {
+    min-height: unset;
+    height: 450px;
+}
+
+.gepatit-hero-2 img {
+object-position: 89% 40%;
+}
+
+.gepatit-cta-2 .gepatit-hero-copy {
+    font-size: 16px;
+    line-height: 20px;
+    width: 50%;
+}
+.gepatit-therapy>img {
+    height: 440px;
+}
+
+.gepatit-therapy-grid {
+    gap: 10px;
+}
+}
+
+@media (max-width: 767px) {
+    .gepatit-therapy-card {
+    width: calc(100% - 60px);
+    /* margin: -70px auto 0; */
+    padding: 24px;
+}
+
+.gepatit-therapy-grid article {
+    padding: 16px;
+}
+
+.gepatit-liver-steps .gepatit-stack-list {
+        top: 48%;
+}
+
+.gepatit-liver-steps {
+    min-height: 500px;
+}
+
+.maincontent p {
+    text-align: justify;
+}
+
+.gepatit-cta-card {
+    padding: 24px;
+}
+
+    .maincontent .heading2 {
+        line-height: 24px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gepatit-cta-2 .gepatit-hero-copy {
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 100%;
+        transform: unset;
+    }
+
+    .gepatit-timeline-slide .gepatit-content {
+        right: 13%;
+        width: 32%;
+        top: 15%;
+    }
+
+        .gepatit-hero-copy {
+        padding: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        .gepatit-diagnostics .gepatit-content {
+        left: 5%;
+        top: 4%;
+        width: 65%;
+    }
+
+    .gepatit-therapy>img {
+        height: 350px;
+    }
+
+    .gepatit-therapy-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .gepatit-therapy-grid article {
+        width: 100%;
+    }
+
+    .maincontent p {
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+        .gepatit-liver-steps .gepatit-stack-list {
+            width: 530px;
+        }
+
+    .gepatit-step-card.gepatit-left, .gepatit-step-card.gepatit-right, .gepatit-step-card.gepatit-bottom {
+        width: 100%;
+    }
+
+    .gepatit-cta>img {
+    height: 550px;
+    object-position: -340px 0;
+    }
+
+        .gepatit-cta-2 {
+            display: flex;
+            flex-direction: column;
+        }
+}
+
+@media (max-width: 550px) {
+    .gepatit-liver-steps .gepatit-stack-list {
+        width: 470px;
+        gap: 5px;
+        top: 39%;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .gepatit-content {
+        font-size: 16px;
+        line-height: 16px;
+        width: 37%;
+        width: 100%;
+        position: relative;
+        right: unset;
+    }
+
+    .maincontent p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .gepatit-timeline-slide .gepatit-content {
+        right: 8%;
+        right: unset;
+    }
+
+    .gepatit-cta-2 img {
+        height: 450px;
+        object-fit: cover;
+        object-position: -490px -40px;
+    }
+}
+
+@media (max-width: 390px) {
+    .banner.mncntnt .row {
+        padding-top: 0px;
+    }
+
+    .gepatit-cta-2 img {
+        height: 268px;
+        object-fit: cover;
+        object-position: -300px 0px;
+    }
+
+    .gepatit-timeline-slide .gepatit-content {
+    right: 13%;
+    right: unset;
+    width: 100%;
+    }
+
+    .gepatit-diagnostics .gepatit-content {
+        width: 100%;
+        top: 0;
+    left: 0;
+    padding: 10px;
+            padding-right: 10px !important;
+    }
+
+    .gepatit-slide {
+        padding: 16px;
+    }
+
+    .gepatit-therapy>img {
+        height: 270px;
+    }
+
+    .gepatit-liver-steps .gepatit-stack-list {
+        width: 100%;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+    }
+
+    .gepatit-cta>img {
+        height: 450px;
+        object-position: -425px 0;
+    }
+
+    .contacts .container .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 0;
+        margin: 0;
+    }
+
+    .kontakty {
+        padding: 16px;
+    }
+
+    .container .row {
+        padding: 16px;
+    }
+
+    .gepatit-therapy-card {
+        padding: 16px;
+        width: 100%;
+    }
+    .banner .learn-more {
+    padding: 16px;
+    }
+
+        .gepatit-cta-2 img {
+        height: 210px;
+        
+        object-position: -220px 0px;
+ }
+
+     .banner h1, .banner h2 {
+    font-size: 24px;
+ }
+
+     .banner .learn-more {
+        padding: 16px;
+        /* padding: 0; */
+        padding-left: 0;
+        padding-right: 0;
+     }
+
+     .gepatit-therapy-card {
+margin: -40px auto 0;
+     }
+    
+
+    .maincontent .heading2 {
+line-height: 1.2;
+padding: 10px 0;
+    }
+
+.gepatit-therapy-card, .gepatit-cta-card  {
+    width: 100%;
+}
+
+    .gepatit-cta-2 .gepatit-hero-copy {
+    padding-left: 0;
+    padding-right: 0;
+    }     
+
+    .banner-bottom .learn-more {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }

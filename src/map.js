@@ -11,7 +11,7 @@ if (window.innerWidth < 768) {
 }
 
 if (window.innerWidth <= 320) {
-    mapCenter = [55.7341, 37.6648];
+    mapCenter = [55.7341, 37.6608];
 }
 
 const map = L.map('mapdiv', {
